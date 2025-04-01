@@ -1,0 +1,66 @@
+/* ===================================
+   FORMS
+=================================== */
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: #444 !important;
+    border: none !important;
+    outline: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+        color: #9D9DAE !important;
+    }
+
+    &::-webkit-input-placeholder {
+        /* Chrome, Safari, Edge */
+        color: #9D9DAE !important;
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #9D9DAE !important;
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #9D9DAE !important;
+    }
+
+    &:focus {
+        outline: 1px solid #fff !important;
+        background-color: rgba(255, 255, 255, 1) !important;
+        color: #444 !important;
+        outline: none;
+    }
+
+    &:not(:placeholder-shown):not(:focus) {
+        color: #fff !important;
+    }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    outline: none !important;
+    border: none !important;
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.form-check-label {
+    color: #9D9DAE !important;
+}
+
+.form-check-input {
+    &.checked {
+        border-color: $primary-color;
+    }
+}

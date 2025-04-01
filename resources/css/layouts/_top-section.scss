@@ -1,0 +1,15 @@
+/* ===================================
+   TOP SECTION
+=================================== */
+.top {
+    margin-top: 73px;
+    min-height: 80vh;
+
+    .content {
+        max-width: 800px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1000px) {
+        min-height: 75vh;
+    }
+}

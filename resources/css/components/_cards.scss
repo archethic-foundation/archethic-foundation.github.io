@@ -1,0 +1,42 @@
+/* ===================================
+   CARDS
+=================================== */
+
+/* === CLASSIC CARDS === */
+.cards-box {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards-box-variants{
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem;
+
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+}
+
+
+/* === CLASSIC COLD WALLET === */
+#how-solves {
+    .card-archethic {
+        .argument {
+            i {
+                color: $succes-color;
+                border-radius: 9rem;
+            }
+        }
+    }
+
+    .card-traditional {
+        i {
+            color: #c91212;
+            border-radius: 9rem;
+            background-color: rgba(182, 0, 0, 0.1);
+        }
+    }
+}

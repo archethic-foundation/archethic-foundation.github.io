@@ -1,0 +1,83 @@
+/* ===================================
+   ROADMAP
+=================================== */
+.roadmap {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background-color: $primary-color;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .roadmap-item {
+        margin-bottom: 10px;
+        position: relative;
+        display: flex;
+        z-index: 99;
+        width: 100%;
+
+        .roadmap-content {
+            width: 45%;
+            z-index: 2;
+            min-height: 200px;
+
+            &.left {
+                margin-right: auto;
+                text-align: left;
+            }
+
+            &.right {
+                margin-left: auto;
+                text-align: left;
+            }
+        }
+
+        .roadmap-point {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border: 4px solid $primary-color;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &::before {
+            left: 50%;
+            width: 2px;
+        }
+
+        .roadmap-item {
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+
+            .roadmap-content {
+                width: 100%;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .roadmap-point {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

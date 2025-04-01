@@ -1,0 +1,17 @@
+/* ===================================
+   MOCKUP IMAGES
+=================================== */
+.mockup-img {
+    background-size: 150%;
+    background-position: 30% 25%;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-repeat: no-repeat;
+
+    @media (max-width: 767px) {
+        background-size: 170%;
+        background-position: 30% 25%;
+        border-radius: 0;
+        min-height: 250px;
+    }
+}

@@ -1,0 +1,73 @@
+/* ===================================
+   TEAM MEMBERS SLIDER
+=================================== */
+
+.team-slider {
+  .info-area {
+    height: 300px;
+  }
+
+  .img-area {
+    overflow: hidden;
+
+    img {
+      margin: 0 auto;
+      transform: scale(1.05);
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .move-animation {
+    position: relative;
+    animation: move-animation 5s ease-in-out infinite;
+  }
+
+  @keyframes move-animation {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 0px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    .owl-prev,
+    .owl-next {
+      pointer-events: all;
+      transition: all 0.3s ease;
+
+      &.owl-prev {
+        position: absolute;
+        left: -75px;
+      }
+
+      &.owl-next {
+        position: absolute;
+        right: -75px;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .owl-prev,
+    .owl-next {
+      display: none;
+    }
+  }
+}

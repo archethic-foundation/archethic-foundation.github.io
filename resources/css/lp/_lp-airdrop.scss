@@ -1,0 +1,233 @@
+// lp-airdrop.scss
+
+// On peut regrouper html, body et leurs scrollbars
+html,
+body {
+    overflow-x: hidden;
+
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #1B0B2B;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #B98CD9;
+        border-radius: 4px;
+
+        &:hover {
+            background: rgb(164, 124, 193);
+        }
+    }
+}
+
+// Base animations
+.animate-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+// Animation delays
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+//Reset
+#lp-airdrop {
+    background: linear-gradient(180deg, rgba(64, 6, 100, 1) 1%, rgba(11, 5, 27, 1) 25%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    //Title
+    h1 {
+        font-size: 66px !important;
+    }
+
+    h2 {
+        font-size: 30px !important;
+    }
+
+    //Img
+    .img-uco-deco-1 {
+        position: absolute;
+        top: 200px;
+        left: -275px;
+        width: 600px;
+        z-index: -1;
+        opacity: 50% !important;
+    }
+
+    .img-uco-deco-2 {
+        position: absolute;
+        top: 680px;
+        right: 0;
+        width: 300px;
+        z-index: -1;
+        rotate: -35deg;
+        opacity: 20% !important;
+    }
+
+    .img-uco-deco-3 {
+        position: absolute;
+        top: 1850px;
+        left: 225px;
+        width: 400px;
+        z-index: -1;
+        rotate: -30deg;
+        opacity: 10% !important;
+    }
+
+    // Media query (~iPad)
+    @media (max-width: 1024px) and (min-width: 768px) {
+        .img-uco-deco-1 {
+            left: -270px;
+            width: 500px;
+        }
+
+        .img-uco-deco-2 {
+            top: 750px;
+            right: -100px;
+            width: 300px;
+        }
+
+        .img-uco-deco-3 {
+            display: none;
+        }
+
+    }
+
+    // Media mobile
+    @media (max-width: 767px) {
+        h1 {
+            font-size: 34px !important;
+        }
+
+        h2 {
+            font-size: 24px !important;
+        }
+
+        .img-uco-deco-1,
+        .img-uco-deco-3 {
+            display: none;
+        }
+
+        .img-uco-deco-2 {
+            top: 1000px;
+            right: -150px;
+            width: 300px;
+        }
+
+    }
+
+    //UCO Icon
+    #logo-uco {
+        filter: drop-shadow(0px 1px 8px #000);
+    }
+
+    #partner-box {
+        background-color: rgba(255, 255, 255, 0.05);
+        max-width: 300px;
+
+
+        .partners {
+            height: 60px;
+
+
+            @media (max-width: 576px) {
+                max-height: 40px;
+            }
+        }
+    }
+
+
+    //Quote
+    .quote-container {
+        position: relative;
+    }
+
+    .quote-left,
+    .quote-right {
+        font-size: 5rem;
+        position: absolute;
+        top: 25%;
+        transform: translateY(-50%);
+        z-index: 0;
+        color: rgba(255, 255, 255, 0.1);
+    }
+
+    .quote-left {
+        left: 100px;
+    }
+
+    .quote-right {
+        right: 100px;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    @media (max-width: 576px) {
+
+        .quote-left,
+        .quote-right {
+            font-size: 3.5rem;
+            top: 2%;
+        }
+
+        .quote-left {
+            left: 20px;
+        }
+
+        .quote-right {
+            right: 20px;
+        }
+    }
+
+    //Video
+    .video-container {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        border-radius: 0.5rem;
+    }
+
+    @media (max-width: 767.98px) {
+        .video-container {
+            margin-left: -1.5rem !important;
+            margin-right: -1.5rem !important;
+            margin-bottom: -1.5rem !important;
+            border-radius: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+/* ===================================
+   BUTTONS
+=================================== */
+
+/* === BASE BUTTON STYLE === */
+.btn {
+    opacity: 0.9;
+    border-radius: 30px;
+    padding: 7px 20px;
+}
+
+.btn:hover {
+    opacity: 1;
+    transition: 0.8s;
+}
+
+/* === PRIMARY BUTTON === */
+.btn-primary {
+    background: $gradient-primary;
+    border-color: #8f5ccd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: #8f5ccd !important;
+    border-color: #8f5ccd !important;
+}
+
+.btn-outline-primary {
+    border-color: #8f5ccd;
+    color: #fff;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-focus:focus,
+.btn-outline-focus:active {
+    background: #8f5ccd !important;
+    border-color: #8f5ccd !important;
+}
+
+/* === SECONDARY BUTTON === */
+.btn-secondary {
+    background: $gradient-secondary;
+    border-color: $secondary-color;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    background: $secondary-color !important;
+    border-color: $secondary-color !important;
+}
+
+.btn-outline-secondary {
+    border-color: $secondary-color;
+    color: #fff;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active {
+    background: $gradient-secondary;
+    border-color: $secondary-color;
+    color: #fff;
+}
+
+/* === DARK BUTTON === */
+.btn-dark {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    background: rgba(0, 0, 0, 1) !important;
+    border-color: $secondary-color !important;
+}
+
+/* === LIGHT BUTTON === */
+.btn-light {
+    border-color: #fff;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    background: transparent !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+/* === VALIDATED BUTTON === */
+.btn-validated {
+    background-color: rgba(0, 182, 122, 0.3);
+    border-color: #00B67A;
+    color: #fff;
+}
+
+.btn-validated:hover,
+.btn-validated:focus,
+.btn-validated:active {
+    background-color: rgba(0, 182, 122, 0.3);
+    border-color: #00B67A;
+    color: #fff;
+}
+
+
+/* === SOCIAL BUTTON === */
+.btn-social:hover{
+    border: 1px solid rgba(110, 66, 240, 0.6);
+
+}

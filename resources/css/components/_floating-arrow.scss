@@ -1,0 +1,28 @@
+/* ===================================
+   FLOATING ARROW ANIMATION
+=================================== */
+.arrow-icon {
+    bottom: 20px;
+    animation: floatDown 2s infinite;
+    color: $primary-color;
+}
+
+@media (max-width: 768px) {
+    .arrow-icon {
+        bottom: -20px;
+    }
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}

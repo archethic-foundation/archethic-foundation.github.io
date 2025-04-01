@@ -1,0 +1,58 @@
+services:
+  archethic_app:
+    image: ancelade/php-nginx-d:8.3
+    container_name: archethic_app
+    working_dir: /var/www/html
+    environment:
+      - WEB_PATH=/var/www/html/public
+      - SERVER_NAME=www.archethic.net
+      - PORT=80
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - archethic_network
+
+  archethic_queue:
+    image: ancelade/php-nginx-d:8.3
+    container_name: archethic_queue
+    working_dir: /var/www/html
+    entrypoint: sh -c "bash -c 'sleep 5 && php artisan queue:work database'"
+    volumes:
+      - .:/var/www/html
+
+    restart: unless-stopped
+    networks:
+      - archethic_network
+    healthcheck:
+      test: [ "CMD", "php", "-v" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  archethic_scheduler:
+    image: ancelade/php-nginx-d:8.3
+    container_name: archethic_scheduler
+    working_dir: /var/www/html
+    entrypoint: sh -c "bash -c 'sleep 5 &&
+      php artisan schedule:work'"
+    volumes:
+      - .:/var/www/html
+    restart: unless-stopped
+    networks:
+      - archethic_network
+    healthcheck:
+      test: [ "CMD", "php", "-v" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+networks:
+  archethic_network:
+    name: archethic_network
+    driver: bridge
+
+###############

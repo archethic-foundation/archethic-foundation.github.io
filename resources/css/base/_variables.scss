@@ -1,0 +1,71 @@
+/* ===================================
+   VARIABLES
+=================================== */
+
+/* === PRIMARY COLORS === */
+$primary-color: #B98CD9;
+$secondary-color: #6E42F0;
+$dark-color: #030014;
+$highlight-primary: #805EE8;
+$succes-color: #00B67A;
+
+/* === GRADIENT COLORS === */
+$gradient-primary: linear-gradient(90deg, #8f5ccd 0%, #5b2c95);
+$gradient-secondary: linear-gradient(90deg, #6e42f0 0%, #3B0FBD 100%);
+
+/* === OPACITY LEVELS === */
+$opacity-100: 1.0;
+$opacity-90: 0.9;
+$opacity-80: 0.8;
+$opacity-70: 0.7;
+$opacity-60: 0.6;
+$opacity-50: 0.5;
+$opacity-40: 0.4;
+$opacity-30: 0.3;
+$opacity-20: 0.2;
+$opacity-10: 0.1;
+
+/* === BORDER RADIUS === */
+$border-radius-none: 0;
+$border-radius-sm: 10px;
+$border-radius-md: 20px;
+$border-radius-lg: 30px;
+$border-radius-xl: 40px;
+
+/* === FONT SIZES === */
+$font-xs: 12px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 20px;
+$font-xl: 24px;
+$font-xxl: 28px;
+$font-xxxl: 38px;
+$font-hero1: 32px;
+$font-hero2: 34px;
+$font-hero3: 50px;
+$font-hero4: 66px;
+
+/* === SHADOWS === */
+$text-shadow: 0 1px 8px #000;
+
+/* === BORDERS === */
+$border-color-light: rgba(255, 255, 255, 0.3);
+$border-color-primary: #D35EFD;
+$border-color-secondary: #6E42F0;
+
+/* === BACKGROUND COLORS === */
+$bg-primary: $primary-color;
+$bg-secondary: #6E42F0;
+$bg-dark: rgba(0, 0, 0, 0.8);
+$bg-light: rgba(255, 255, 255, 0.8);
+$bg-1: rgba(85, 64, 191, 0.3);
+$bg-2: rgba(59, 15, 189, 0.3);
+$bg-3: rgba(85, 64, 191, 0.1);
+$bg-4: rgba(0, 0, 0, 0.5);
+$bg-5: rgba(50, 50, 50, 0.5);
+$bg-banner: rgb(13, 6, 36, 1);
+$bg-waitlist: rgba(3, 0, 20, 0.5);
+$bg-partner-hover: rgba(0, 0, 0, 1);
+
+/* === FONT FAMILIES === */
+$font-family-primary: 'Telegraf', sans-serif;

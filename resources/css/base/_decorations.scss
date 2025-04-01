@@ -1,0 +1,67 @@
+/* ===================================
+   DECORATIONS
+=================================== */
+
+/* === BORDER RADIUS === */
+.rounded-no {
+  border-radius: 0;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.rounded-xl {
+  border-radius: 20px;
+}
+
+.rounded-xxl {
+  border-radius: 40px;
+}
+
+/* === OPACITY CLASSES === */
+.op-10 { 
+  opacity: 1.0 !important; 
+}
+
+.op-09 { 
+  opacity: 0.9; 
+}
+
+.op-08 { 
+  opacity: 0.8; 
+}
+
+.op-07 { 
+  opacity: 0.7; 
+}
+
+.op-06 { 
+  opacity: 0.6; 
+}
+
+.op-05 { 
+  opacity: 0.5; 
+}
+
+.op-04 { 
+  opacity: 0.4; 
+}
+
+.op-03 { 
+  opacity: 0.3; 
+}
+
+.op-02 { 
+  opacity: 0.2; 
+}
+
+.op-01 { 
+  opacity: 0.1; 
+}
+
+/* === SEPARATOR === */
+.separator {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 1px;
+}

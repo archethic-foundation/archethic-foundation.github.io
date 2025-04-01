@@ -1,0 +1,105 @@
+/* ===================================
+   TYPOGRAPHY
+=================================== */
+.hero1 {
+    font-size: 32px;
+}
+
+.hero2 {
+    font-size: 34px;
+}
+
+.hero3 {
+    font-size: 50px;
+}
+
+.hero4 {
+    font-size: 66px;
+}
+
+.text-xs {
+    font-size: 12px;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+
+.text-md {
+    font-size: 16px;
+}
+
+.text-lg {
+    font-size: 20px;
+}
+
+.text-xl {
+    font-size: 24px;
+}
+
+.text-xxl {
+    font-size: 28px;
+}
+
+.text-xxxl {
+    font-size: 34px;
+}
+
+.text-primary {
+    color: $primary-color !important;
+}
+
+.text-highlight-primary {
+    color: $primary-color;
+}
+
+.text-highlight-secondary {
+    color: #8B7EC6;
+}
+
+.text-shadow {
+    text-shadow: 0 1px 8px #000;
+}
+
+.no-text-shadow {
+    text-shadow: none;
+}
+
+@media (max-width: 575.98px) {
+    .hero1 {
+        font-size: 34px;
+    }
+
+    .hero2 {
+        font-size: 30px;
+    }
+
+    .hero3 {
+        font-size: 40px;
+    }
+
+    .hero4 {
+        font-size: 45px;
+    }
+
+    .text-xl {
+        font-size: 20px;
+    }
+
+    .text-xxl {
+        font-size: 28px;
+    }
+}
+
+.line-height-2 {
+    line-height: 2
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.fw-black {
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 900;
+}

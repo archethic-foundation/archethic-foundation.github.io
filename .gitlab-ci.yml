@@ -1,0 +1,70 @@
+image: ancelade/php-nginx-consumedia-8.3-cicd:latest
+
+
+before_script:
+  - apt update && apt install -y sshpass
+
+stages:
+  - Test
+  - Deployment
+
+PHPStan:
+  stage: Test
+  script:
+    - composer install
+    - cp .env.cicd .env
+    - php artisan key:generate
+    - apt update && apt install npm nodejs -y && npm i && npm run build
+    - ./vendor/bin/phpstan analyse  --memory-limit=2G
+
+
+
+
+Pest:
+  stage: Test
+  script:
+    - composer install
+    - cp .env.cicd .env
+    - php artisan key:generate
+    - php artisan migrate
+    - apt update && apt install npm nodejs -y && npm i && npm run build
+    - php artisan test
+
+
+
+
+#Dusk:
+#  stage: Test
+#  script:
+#    - composer install
+#    - apt update && apt install -y chromium libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev
+#    - cp .env.cicd .env
+#    - php artisan key:generate
+#    - php artisan migrate
+#    - php artisan serve --port=80 &
+#    - php artisan db:seed
+#    - php artisan dusk:chrome-driver
+#    - php artisan dusk --colors --debug
+#  artifacts:
+#    when: on_failure
+#    paths:
+#      - tests/Browser/screenshots/*
+
+
+
+
+deploy_staging:
+  stage: Deployment
+  script:
+    - cd $CI_PROJECT_DIR
+    - cp $ENV_FILE_STAGING .env
+    - rm -Rf ./storage/logs
+    - sshpass -p $SSHPASS ssh -o stricthostkeychecking=no root@$IP 'cd /data/volumes/archethic/staging/app/ && git reset --hard HEAD && git pull && git diff-tree -r --name-only --no-commit-id HEAD HEAD^ > changed_files.txt && git log -1 --pretty=%B > last_commit_message.txt'
+    - sshpass -p $SSHPASS ssh -o stricthostkeychecking=no root@$IP 'cd /data/volumes/archethic/staging/app/ && npm i && npm run build'
+    - sshpass -p $SSHPASS scp -o stricthostkeychecking=no -r ./.env root@$IP:/data/volumes/archethic/staging/app/.env
+    - sshpass -p $SSHPASS ssh -o stricthostkeychecking=no root@$IP 'docker exec $(docker ps --filter "name=archethic_staging_archethic_staging" --format "{{.ID}}" | head -n 1) bash -c "sh after-deploy-web-container.sh staging /var/www"'
+
+  only:
+    - staging
+
+

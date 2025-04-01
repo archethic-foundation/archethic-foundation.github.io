@@ -1,0 +1,28 @@
+/* ===================================
+   SOCIAL LINK UNDERLINE
+=================================== */
+#social-link {
+    a {
+        color: #fff;
+        opacity: 0.9;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.3s, opacity 0.3s;
+
+        &:hover {
+            border-bottom: 1px solid #b98cd9;
+            opacity: 1;
+        }
+
+        &.active {
+            opacity: 1 !important;
+        }
+
+        @media (max-width: 768px) {
+            img {
+                width: 20px !important;
+                height: 30px !important;
+            }
+        }
+    }
+}
