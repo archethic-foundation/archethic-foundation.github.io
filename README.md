@@ -10,7 +10,7 @@ modern development experience. Whether you’re contributing to the codebase or 
 3. [Configuration](#configuration)
 4. [Running the Application](#running-the-application)
 5. [Running Tests](#running-tests)
-6. [Building for Production](#building-for-production)
+6. [Deploying production](#deploying-production)
 7. [Docker (Optional)](#docker-optional)
 8. [License](#license)
 
@@ -116,6 +116,13 @@ environment for all developers and simplifies deployment.
    This will execute your unit and feature tests, providing a summary of the results.
 
 ---
+
+## Deploying production
+
+Website has been hitorically created with Laravel 11. 
+For hosting simplicity, we convert it to a static website before publishing it to GitHub Pages.
+
+To deploy, simply push your changes to the `main` branch. This will trigger the deploy GitHub Action.
 
 ## License
 
