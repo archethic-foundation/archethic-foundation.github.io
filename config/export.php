@@ -20,6 +20,9 @@ return [
         'privacy-policy-wallet',
         'privacy',
         'terms-of-service',
+        'terms-of-use-defi',
+        'terms',
+        'job-offer/blockchain-developer'
     ],
 
     /*

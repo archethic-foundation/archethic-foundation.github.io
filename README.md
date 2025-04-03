@@ -10,6 +10,8 @@ modern development experience. Whether you’re contributing to the codebase or 
 3. [Configuration](#configuration)
 4. [Running the Application](#running-the-application)
 5. [Running Tests](#running-tests)
+6. [Adding a page](#adding-a-page)
+6. [Adding a redirection](#adding-a-redirection)
 6. [Deploying production](#deploying-production)
 7. [Docker (Optional)](#docker-optional)
 8. [License](#license)
@@ -116,6 +118,18 @@ environment for all developers and simplifies deployment.
    This will execute your unit and feature tests, providing a summary of the results.
 
 ---
+
+## Adding a page
+If you want to add a page which is not references by any hyperlink, you will have to export it explicitely.
+
+To do so, edit [`config/export.php`](config/export.php). Add your file in the `paths` array.
+
+## Adding a redirection
+If you need to redirect one URL to another, you must duplicate the page. This is the simplest solution becaues GitHub pages does not support redirection setup.
+
+To do so, edit [`.github/workflows/deploy.yaml`](.github/workflows/deploy.yaml). 
+Add a `cp` command in the `# Simulate redirections '-_-` section.
+
 
 ## Deploying production
 

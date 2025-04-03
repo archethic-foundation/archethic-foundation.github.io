@@ -77,7 +77,47 @@ jobs:
           app_url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')
           echo "Replace all remaining absolute URLs 'https://localhost' by \'$app_url\'"
           LC_ALL=C find dist -type f -exec sed -i.bu "s|https://localhost/|$app_url|g" {} +
-          cat dist/index.html
+
+          # Simulate redirections '-_-
+          cd dist
+          cp hot-wallet/index.html wallet.html
+          cp privacy/index.html privacy.html
+          cp terms/index.html terms.html
+          cp privacy-policy-archethic/index.html privacy-policy-archethic.html
+          cp privacy-policy-wallet/index.html privacy-policy-wallet.html
+          cp terms-of-use-defi/index.html terms-of-use-defi.html
+          cp job-offer/blockchain-developer/index.html recruitment-bcdev.html
+          cp assets/img/icon_32.png icon_32.png
+          cp assets/img/Ae-flat-white.png Ae-flat-white.png
+          cp assets/img/favicon.ico favicon.ico
+          cp assets/img/exchanges/polygon.png polygon.529bc018.png
+          cp assets/img/exchanges/bsc.png bsc.f03c1a39.png
+          cp assets/img/team/team-coo.webp team-coo.f8f566e9.webp
+          cp assets/img/mockups/hot-wallet-mockup.png wallet_hot.e5c72284.png
+          cp assets/img/partners/flowdesk.png flowdesk.f79ea27d.png
+          cp assets/img/partners/hacken.png hacken.50fb7c4d.png
+          cp assets/img/partners/probit.png probit.0f4008c9.png
+          cp assets/img/team/team-lead-tech.webp team-lead-tech.7dd37779.webp
+          cp assets/img/partners/generate.png generate.7a996275.png
+          cp assets/img/partners/beys.png beys.733d5304.png
+          cp assets/img/exchanges/ethereum.png ethereum.6a672b30.png
+          cp assets/img/partners/hec.png hec.fcfe3338.png
+          cp assets/img/partners/polytechnique.png polytechnique.4e03fd72.png
+          cp assets/img/partners/station-f.png station-f.021f9cab.png
+          cp assets/img/exchanges/archethic.png archethic.c598d950.png
+          cp assets/img/partners/cointribune.png cointribune.88725de8.png
+          cp assets/img/partners/cnrs.svg cnrs.9fa7c708.png
+          cp assets/img/team/team-ceo.webp team-ceo.68f5772f.webp
+          cp assets/img/team/team-lead-architect.webp team-lead-architect.7a92e9f3.webp
+          cp assets/img/team/team-cio.webp team-cio.61fee0f9.webp
+          cp assets/img/exchanges/probit.svg probit.f90d6d9b.svg
+          cp assets/img/exchanges/mexc.svg mexc.a18e1a45.svg
+          cp assets/img/partners/google.svg google.eff6c494.png
+          cp assets/img/partners/bpifrance.png bpifrance.b305f4a7.png
+          cp assets/img/partners/french-tech.png french-tech.01692393.png
+          cp assets/video/wallet_3d.webm wallet_3d.86c77392.webm
+          cp assets/img/biometric-wallet.png wallet_hw.de2aae14.png
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
