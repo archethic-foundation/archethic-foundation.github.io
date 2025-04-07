@@ -19,11 +19,7 @@
                         Join Archethic’s vision of a password-free digital world built on privacy, security, and user
                         empowerment.
                     </p>
-                    <div class="d-flex flex-column flex-md-row gap-3 justify-content-center justify-content-md-start">
-                        <a href="#buy-uco" class="btn btn-primary mx-auto mx-md-0" title="Buy UCO Tokens Now">Buy UCO now <i
-                                    class="bi bi-arrow-right ms-2"></i></a>
-                       
-                    </div>
+                
                 </div>
                 <div class="col-lg-3 col-xl-4 d-none d-lg-flex align-items-center">
                     <img src="/assets/img/bg/bg-uco-9.png" alt="Illustration of the UCO Token by Archethic"

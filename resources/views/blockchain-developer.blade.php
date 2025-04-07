@@ -38,7 +38,7 @@
                         remembering passwords or worrying about online security—your fingerprint is all you need.
                         Sending money or making online payments happens instantly, with complete confidence that your
                         information is protected. In this world, your online identity is truly yours—fully secure and
-                        under your control, without relying on big companies. <a href="/welcome"><span
+                        under your control, without relying on big companies. <a href="/"><span
                                 class="underline">Archethic</span></a> has spent the last 8 years
                         working to bring this world to you.
                     </p>

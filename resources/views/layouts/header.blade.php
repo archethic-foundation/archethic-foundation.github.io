@@ -53,7 +53,7 @@
                 <ul class="navbar-nav mx-auto mb-2 mb-xxl-0">
                     <li class="nav-item">
                         <a class="nav-link mt-4 mt-md-2 {{ Request::is('/') ? 'active' : '' }}"
-                            href="/welcome" title="Go to Home">Home</a>
+                            href="/" title="Go to Home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mt-4 mt-md-2 {{ Request::is('uco-token') ? 'active' : '' }}"
