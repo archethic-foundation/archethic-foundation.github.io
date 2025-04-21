@@ -15,12 +15,6 @@ Route::middleware([SeoNoIndex::class])->group(function () {
         return view('helix');
     });
 
-    Route::get('/biometric-cold-wallet', function () {
-        return view('biometric-cold-wallet', [
-            'participantCount' => 538,
-        ]);
-    })->name('biometric-cold-wallet');
-
     Route::get('/hot-wallet', function () {
         return view('hot-wallet');
     })->name('hot-wallet');
@@ -94,7 +88,6 @@ use Illuminate\Support\Facades\Response;
 Route::get('/sitemap.xml', function () {
     $pages = [
         '/' => '1.0',
-        '/biometric-cold-wallet' => '0.8',
         '/hot-wallet' => '0.8',
         '/uco-token' => '0.8',
         '/technology' => '0.8',

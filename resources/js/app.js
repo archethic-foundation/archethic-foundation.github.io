@@ -2,7 +2,6 @@ import './bootstrap';
 
 // Components
 import './components/cold_wallet-video';
-import './components/copy-to-clipboard';
 import './components/slider-partners';
 import './components/sticky-header';
 import './components/teamSlider';

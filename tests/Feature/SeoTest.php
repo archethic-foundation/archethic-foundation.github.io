@@ -12,7 +12,6 @@ test('old urls redirect to new urls', function (string $oldUrl, string $newUrl) 
 })->with([
     'homepage redirect' => ['/index.html', '/'],
     'wallet redirect' => ['/wallet.html', '/hot-wallet'],
-    'hardware wallet redirect' => ['/wallet_hw.html', '/biometric-cold-wallet'],
     'privacy redirect' => ['/privacy.html', '/privacy'],
     'terms redirect' => ['/terms.html', '/terms'],
 ]);
@@ -42,7 +41,6 @@ test('public pages are indexable', function (string $url) {
 })->with([
     'homepage' => '/',
     'hot wallet' => '/hot-wallet',
-    'cold wallet' => '/biometric-cold-wallet',
     'token page' => '/uco-token',
 ]);
 
@@ -90,5 +88,4 @@ test('canonical urls are correct', function (string $url) {
 })->with([
     'homepage canonical' => '/',
     'hot wallet canonical' => '/hot-wallet',
-    'cold wallet canonical' => '/biometric-cold-wallet',
 ]);

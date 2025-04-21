@@ -7,8 +7,7 @@ export default defineConfig({
             input: [
                 'resources/react/index.jsx',
                 'resources/css/app.scss',
-                'resources/js/app.js',
-                'resources/js/lp.js'
+                'resources/js/app.js'
             ],
             refresh: true,
         }),

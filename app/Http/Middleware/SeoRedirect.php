@@ -18,7 +18,6 @@ class SeoRedirect
         // Main pages redirects
         '/index.html' => '/',
         '/wallet.html' => '/hot-wallet',
-        '/wallet_hw.html' => '/biometric-cold-wallet',
         '/privacy.html' => '/privacy',
         '/terms.html' => '/terms',
         '/privacy-policy-archethic.html' => '/privacy-policy-archethic',
