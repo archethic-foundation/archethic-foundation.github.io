@@ -57,7 +57,6 @@ class SeoRedirect
         '/bpifrance.b305f4a7.png' => '/assets/img/partners/bpifrance.png',
         '/french-tech.01692393.png' => '/assets/img/partners/french-tech.png',
         '/wallet_3d.86c77392.webm' => '/assets/video/wallet_3d.webm',
-        '/wallet_hw.de2aae14.png' => '/assets/img/biometric-wallet.png',
     ];
 
     /**

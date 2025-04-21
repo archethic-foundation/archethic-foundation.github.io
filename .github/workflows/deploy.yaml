@@ -116,7 +116,6 @@ jobs:
           cp assets/img/partners/bpifrance.png bpifrance.b305f4a7.png
           cp assets/img/partners/french-tech.png french-tech.01692393.png
           cp assets/video/wallet_3d.webm wallet_3d.86c77392.webm
-          cp assets/img/biometric-wallet.png wallet_hw.de2aae14.png
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
