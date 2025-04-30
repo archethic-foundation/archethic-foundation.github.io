@@ -18,7 +18,7 @@
                 </h1>
                 <!-- Description -->
                 <p id="technology-desc" class="text-lg mb-4 op-09 text-shadow">
-                    Backed by 8 years of research and 5 patented breakthroughs, Archethic’s technology sets new
+                    Backed by 8 years of research and 5 patented breakthroughs, <strong>Archethic</strong> team sets new
                     standards in blockchain. Explore the innovations driving the future of digital asset
                     protection.
                 </p>
