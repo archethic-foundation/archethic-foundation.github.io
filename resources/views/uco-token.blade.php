@@ -244,16 +244,19 @@
                 <h2 id="tokenomics-title" class="hero3 px-3 px-md-0 fw-bold">
                     UCO<u> Tokenomics</u>
                 </h2>
-                <p id="tokenomics-desc" class="bg-light d-inline-block px-4 py-2 rounded text-lg">
+                <p id="tokenomics-desc" class="d-none bg-light d-inline-block px-4 py-2 rounded text-lg">
                     Learn how our token is allocated, distributed, and utilized to support sustainable growth within the
                     Archethic ecosystem.
+                </p>
+                <p id="tokenomics-desc" class="  bg-light d-inline-block px-4 py-2 rounded text-lg">
+                You’ll find all key information in the White Paper. However, we are currently revising the token-related figures, and an updated chart will be published in the coming weeks.
                 </p>
             </div>
 
             <!-- Chart Section -->
-            <div class="row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="100">
+            <div class=" row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="100">
                 <div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px;">
-                    <canvas id="tokenomicsChart" style="flex: 0 0 60%;"></canvas>
+                    <canvas class="d-none" id="tokenomicsChart" style="flex: 0 0 60%;"></canvas>
                 </div>
             </div>
         </div>

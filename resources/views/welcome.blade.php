@@ -30,7 +30,7 @@
                     </p>
                   
                     <!-- Buttons -->
-                    <a href="/hot-wallet" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent" title="See Download Options">
+                    <a href="/technology" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent" title="See Download Options">
                         Discover our technologies <i class="d-none bi bi-arrow-right ms-2"></i>
                     </a>
                     <a href="/hot-wallet" class="btn btn-secondary mx-auto mx-lg-0" title="See Download Options">

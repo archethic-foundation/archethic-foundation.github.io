@@ -18,8 +18,8 @@
                 </h1>
                 <!-- Description -->
                 <p id="technology-desc" class="text-lg mb-4 op-09 text-shadow">
-                    Backed by 8 years of research and 11 patented breakthroughs, Archethic’s technology sets new
-                    standards in blockchain and biometrics. Explore the innovations driving the future of digital asset
+                    Backed by 8 years of research and 5 patented breakthroughs, Archethic’s technology sets new
+                    standards in blockchain. Explore the innovations driving the future of digital asset
                     protection.
                 </p>
                 <!-- Buttons -->
@@ -28,13 +28,16 @@
                     <a href="/assets/files/technical_paper.pdf" target="_blank" class="btn btn-primary"
                         title="Read the Technical Paper">
                         Technical paper <i class="bi bi-download ms-2"></i>
-                    </a>
-                   
+                    </a>                   
                 </div>
-            </div>
+            </div>            
         </div>
     </div>
-   
+    <!-- Scroll Arrow -->
+    <a class="d-none d-xl-inline arrow-icon position-absolute w-100 text-center hero2" href="#modules-dl"
+            aria-label="Scroll to See Download Options">
+            <i class="bi bi-arrow-down-circle-fill" aria-hidden="true"></i>
+        </a>
 </section>
 
 <!-- ARCH Consensus -->

@@ -18,10 +18,10 @@
                     </h1>
                     <!-- Description -->
                     <p id="about_us-desc" class="text-lg mb-4 op-09 text-shadow">
-                        From the 1st May 2025, a team team .
+                        As of May 1st, 2025, a <u><strong>new</strong></u> and <u><strong>motivated</strong></u> team has taken over to  relaunch and carry forward the Archethic project,
                         <br>
                         <br class="d-none d-lg-inline">
-                        Main objectives are to maintain fantastic technologies, promote the blockchain to developers and to maintain the <u><strong>price</strong></u> of the Token.
+                        The main objectives are to <u><strong>preserve</strong></u> the excellence of Archethic technologies,<br><u><strong>promote</strong></u> the blockchain to developers, and <u><strong>support</strong></u> the stability and growth of the UCO token.
                     </p>
                     <a href="#about_us-questions" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent" title="See Download Options">
                         Learn more on objectives & organisation <i class="d-none bi bi-arrow-down ms-2"></i>
