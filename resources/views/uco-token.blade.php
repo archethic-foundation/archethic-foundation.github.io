@@ -101,7 +101,7 @@
                                     Centralized Exchanges
                                 </p>
                                 <h3 class="text-xl fw-bold mb-2">
-                                    Buy with Fiats <span class="text-highlight-primary">(€ or $)</span>
+                                    Buy with <span class="text-highlight-primary">Fiats</span> or <span class="text-highlight-primary">Crypto</span>
                                 </h3>
                             </div>
                             <div class="row g-3">
@@ -134,28 +134,32 @@
                                     Decentralized Exchanges
                                 </p>
                                 <h3 class="text-xl fw-bold mb-2">
-                                    Buy with <span class="text-highlight-primary">other Cryptos</span>
+                                    Buy with <span class="text-highlight-primary"> Cryptos</span>
                                 </h3>
                             </div>
                             <div class="row g-3">
-                                <div class="col-6">
+                            <div class="col-6">
                                     <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
-                                       href="https://app.uniswap.org/swap?chain=polygon&inputCurrency=0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359&outputCurrency=0xaa53B93608C88EE55fAD8db4C504Fa20E52642aD"
-                                       title="Buy UCO on Polygon Chain">
-                                        <img height="70" src="/assets/img/exchanges/polygon.png" alt="Polygon Chain">
+                                       href="https://www.sushi.com/polygon/explore/pools?tokenSymbols=UCO/" title="Buy UCO on Polygon Chain via Sushi">
+                                       <img height="70" src="/assets/img/exchanges/polygon.png" alt="Polygon Chain">
                                         <div class="pt-2">Polygon&nbsp;Chain</div>
                                     </a>
                                 </div>
-                                <div class="col-6">
+
+
+                                <div class="col-6 d-none">
                                     <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
-                                       href="https://swap.archethic.net/" title="Buy UCO on Archethic Chain">
-                                        <img height="70" src="/assets/img/exchanges/archethic.png" alt="Archethic Chain">
-                                        <div class="pt-2">Archethic&nbsp;Chain</div>
+                                   
+                                       href="https://app.uniswap.org/swap?chain=polygon&inputCurrency=0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359&outputCurrency=0xaa53B93608C88EE55fAD8db4C504Fa20E52642aD"
+                                       title="Buy UCO on Polygon Chain">
+                                        <img height="70" src="/assets/img/exchanges/polygon.png" alt="Buy UCO on Polygon Chain via UniSwap">
+                                        <div class="pt-2">Polygon&nbsp;Chain via UniSwap</div>
                                     </a>
                                 </div>
+                               
                             </div>
                             <div class="row g-3">
-                                <div class="col-6">
+                                <div class="col-6  d-none">
                                     <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
                                        href="https://app.uniswap.org/swap?chain=ethereum&inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x1A688D3d294ee7BcC1f59011DE93d608Dc21c377"
                                        title="Buy UCO on Ethereum Chain">
@@ -163,7 +167,7 @@
                                         <div class="pt-2">Ethereum&nbsp;Chain</div>
                                     </a>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6  d-none">
                                     <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
                                        href="https://pancakeswap.finance/swap?outputCurrency=0xf1e5bbd997501a8439619266A09a54b2b499eAA3&inputCurrency=0x55d398326f99059ff775485246999027b3197955&exactField=output"
                                        title="Buy UCO on Binance Chain">
@@ -183,7 +187,7 @@
 
 
     <!-- Applications -->
-    <section id="applications" class="mb-5" aria-labelledby="applications-title" data-aos="fade-up" data-aos-delay="0">
+    <section id="applications" class="mb-5 d-none" aria-labelledby="applications-title" data-aos="fade-up" data-aos-delay="0">
         <div class="container">
             <!-- Heading -->
             <div class="heading-title text-center mb-3 mt-5 mt-md-0 mb-md-5 pt-md-5 px-3 px-md-5 text-shadow">

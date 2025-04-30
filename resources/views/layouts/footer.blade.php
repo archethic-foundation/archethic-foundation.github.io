@@ -50,7 +50,7 @@
                         <!-- Products Section -->
                         <div class="col-sm-4 col-lg-4 mb-3 mb-sm-0 text-center text-sm-start">
                             <p class="text-uppercase mb-2">Products</p>
-                            <p class="text-sm mb-1">
+                            <p class="text-sm mb-1 d-none">
                                 <a href="https://swap.archethic.net/" target="_blank">DEX (aeSwap)</a>
                             </p>
                             <p class="text-sm mb-1">

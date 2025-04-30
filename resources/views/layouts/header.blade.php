@@ -51,10 +51,23 @@
             </button>
             <div class="collapse navbar-collapse p-4 p-xxl-0" id="navbarCollapse">
                 <ul class="navbar-nav mx-auto mb-2 mb-xxl-0">
+
                     <li class="nav-item">
                         <a class="nav-link mt-4 mt-md-2 {{ Request::is('/') ? 'active' : '' }}"
                             href="/" title="Go to Home">Home</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link mt-4 mt-md-2 {{ Request::is('developers') ? 'active' : '' }}"
+                            href="/developers" title="Explore UCO Token">Developers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link mt-4 mt-md-2 {{ Request::is('hot-wallet') ? 'active' : '' }}"
+                            href="/hot-wallet" title="Explore Wallet">Wallet</a>
+                    </li>
+
+
                     <li class="nav-item">
                         <a class="nav-link mt-4 mt-md-2 {{ Request::is('uco-token') ? 'active' : '' }}"
                             href="/uco-token" title="Explore UCO Token">UCO Token</a>
@@ -147,6 +160,15 @@
         <span class="d-none d-md-inline me-2">Do you still have the Old UCO token on Ethereum, Polygon or BNB chain ?</span>
         <a href="https://migration-uco.archethic.net" target="_blank" class="fw-bold text-light">
             Migration Tool <sup><i class="bi bi-box-arrow-up-right ms-2"></i></sup>
+        </a>
+    </div>
+@endif
+
+@if(Route::is('welcome'))
+    <div id="header-uco" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow">
+        <span class="  d-md-inline me-2 text-xl"> <i class="bi bi-megaphone-fill ms-2  mr-2"></i>   <u class="ml-2"><strong>May 1st</strong></u> marks a reboot. A new team takes over to boost the project.</span>
+        <a href="/about-us"   class="fw-bold text-light">
+           Read more  
         </a>
     </div>
 @endif

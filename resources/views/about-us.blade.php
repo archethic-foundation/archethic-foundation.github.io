@@ -18,20 +18,50 @@
                     </h1>
                     <!-- Description -->
                     <p id="about_us-desc" class="text-lg mb-4 op-09 text-shadow">
-                        Discover the vision, dedication, and innovation that drive Archethic.
+                        From the 1st May 2025, a team team .
+                        <br>
                         <br class="d-none d-lg-inline">
-                        With years of research, patented technology, and a team committed to redefining digital
-                        security, we're building a trusted foundation for a secure, password-free future.
+                        Main objectives are to maintain fantastic technologies, promote the blockchain to developers and to maintain the <u><strong>price</strong></u> of the Token.
                     </p>
-                   
+                    <a href="#about_us-questions" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent" title="See Download Options">
+                        Learn more on objectives & organisation <i class="d-none bi bi-arrow-down ms-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
       
     </section>
 
+        <!-- Questions & Responses -->
+    <section id="about_us-questions" class="top mb-3 mb-lg-5 p-0 d-flex align-items-center position-relative"
+        aria-labelledby="about_us-title">
+        <div class="container">
+            <div class="p-3 p-lg-5 text-center text-lg-start " role="region" aria-labelledby="about_us-title about_us-desc">
+                   <!-- Button -->
+             
+                <div class="content" data-aos="fade-up col-12 col-sm-6 col-lg d-flex align-items-top mt-6 " data-aos-delay="0">
+                    <!-- Title -->
+                    <h1 id="about_us-title" class="hero3 mb-4 mt-4 fw-bold text-shadow  ">
+                       <u>Questions</u> & <u>Responses</u> 
+                    </h1> 
+                    <div class="w-100  heading-title text-left mb-1 mt-2 mt-md-0 mb-md-5 pt-md-5 px-3 px-md-2 text-shadow   content  "  role="region"
+                aria-labelledby="vision-mission-title vision-mission-desc" data-aos="fade-up" data-aos-delay="50">
+                 This is a collection of Questions about the Reboot of the project.<br><br>The team will try to be the more transparent as possible.<br>Feel free to contact us (small rose icon) for adding questions or for improving this section.
+               
+            </div>
+                    <div class="w-100  heading-title text-left mb-3 mt-3 mt-md-0 mb-md-5 pt-md-3 px-3 px-md-2 text-shadow all-articles content  "  role="region"
+                aria-labelledby="vision-mission-title vision-mission-desc" data-aos="fade-up" data-aos-delay="50">
+                 
+               
+            </div>
+                   
+                </div>
+            </div>
+        </div>
+      
+    </section>
     <!-- Vision & Mission -->
-    <section id="vision-mission" class="mb-5 mt-5" aria-labelledby="vision-mission-title">
+    <section id="vision-mission" class="d-none mb-5 mt-5" aria-labelledby="vision-mission-title">
         <div class="container">
             <!-- Heading -->
             <div class="heading-title text-center mb-3 mt-5 mt-md-0 mb-md-5 pt-md-5 px-3 px-md-5 text-shadow" role="region"
