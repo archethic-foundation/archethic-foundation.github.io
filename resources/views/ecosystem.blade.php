@@ -49,7 +49,7 @@
             <!-- Service wrapper -->
             <div class="row g-4 align-items-stretch">
                 <!-- Archethic Swap -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region" aria-labelledby="swap-title"
+                <div class="d-none col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region" aria-labelledby="swap-title"
                     data-aos="fade-up" data-aos-delay="50">
                     <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
                         style="background-image: url('assets/img/bg/swap-box.svg');">

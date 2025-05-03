@@ -19,6 +19,10 @@ Route::middleware([SeoNoIndex::class])->group(function () {
         return view('hot-wallet');
     })->name('hot-wallet');
 
+    Route::get('/developers', function () {
+        return view('developers');
+    })->name('developers');
+
     Route::get('/uco-token', function () {
         return view('uco-token');
     })->name('uco-token');
@@ -26,7 +30,18 @@ Route::middleware([SeoNoIndex::class])->group(function () {
     Route::get('/technology', function () {
         return view('technology');
     })->name('technology');
+    
+    Route::get('/question-list', function () {
+        return view('question-list');
+    })->name('question-list');
 
+    Route::get('/questions-responses/{id}', function ($id) {
+        return view('questions-responses', [
+            'id' => $id,
+            
+        ]);
+    })->name('questions-responses');
+ 
     Route::get('/ecosystem', function () {
         return view('ecosystem', [
             'participantCount' => 538,
@@ -89,6 +104,7 @@ Route::get('/sitemap.xml', function () {
     $pages = [
         '/' => '1.0',
         '/hot-wallet' => '0.8',
+        '/developers' => '0.8',
         '/uco-token' => '0.8',
         '/technology' => '0.8',
         '/ecosystem' => '0.8',

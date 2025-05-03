@@ -5,55 +5,49 @@
 @section('title', 'Archethic')
 @section('meta_description', 'Discover Archethic (UCO), the blockchain platform revolutionizing security and identity.')
 
-<!-- Home top -->
+<!-- Ecosystem Top Section -->
 @section('content')
-    <section id="home-top" class="top pt-lg-5 mb-5" aria-labelledby="home-top-title">
-        <div class="container mt-md-5">
-            <div class="row p-3 pt-5 mb-md-5" data-aos="zoom-in">
-                <div class="col-xl-8">
-
-                
- 
-<h1 id="animated-title"  class="hero4 mb-4 text-shadow text-center text-xl-start fw-bold"></h1>
-
+    <section id="ecosystem-top" class="top mb-3 mb-lg-5 p-0 d-flex align-items-center position-relative"
+        aria-labelledby="ecosystem-title">
+        <div class="container">
+            <!-- Content Section -->
+            <div class="p-3 p-lg-5 text-center text-lg-start" role="region"
+                aria-labelledby="ecosystem-title ecosystem-desc">
+                <div class="content" data-aos="fade-up" data-aos-delay="0">
                     <!-- Title -->
-                    <h1 id="home-top-title" class="d-none hero4 mb-4 text-shadow text-center text-xl-start fw-bold">
-                        <u>Build</u> the future, <u>Host</u> everywhere, <u>Scale</u> infinitely, <u>Own</u> true digital identity
+                    <h1 id="ecosystem-title" class="hero4 mb-4 fw-bold text-shadow">
+                             Build <u>fast</u> & <u>unstoppable</u> dApps in minutes  
+                   </h1>
+                   <h1 id="ecosystem-title" class="hero4 mb-4 fw-bold text-shadow">
+                              and low cost. forever 
+                   </h1>
+                    <h1 id="ecosystem-title" class="hero3 mb-4 fw-bold text-shadow">
+                        no servers, no Solidity, no limits.
                     </h1>
 
-                    <!-- Description Desktop -->
-                    <p class="text-xl text-center text-lg-start mb-4 op-09 text-shadow d-none d-xl-flex">
-                    Transaction Chain, Distributed Web Hosting, WASM Smart Contract, Decentralized Identifiers and more ...
-                    </p>
-
-                     <!-- Welcome Desktop -->
-                     <p class="text-xl text-center text-lg-start mb-4 op-09 text-shadow d-none d-xl-flex fw-bold">
-                        Welcome to Archethic World.
-                    </p>
+                    <!-- Description -->
                   
-                    <!-- Buttons -->
-                    <a href="/technology" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent mt-3" title="See Download Options">
-                        Discover our technologies <i class="d-none bi bi-arrow-right ms-2"></i>
-                    </a>
-                    <a href="/hot-wallet" class="btn btn-secondary mx-auto mx-lg-0 mt-3" title="See Download Options">
-                        Download Hot Wallet <i class="bi bi-arrow-right ms-2"></i>
-                    </a>
+                    <p id="ecosystem-desc" class="text-lg mb-4 op-09 text-shadow">
+                    Build with the language you trust — Javascript, Python, Go, C++, C#, or Rust ...
+                    </p>
                 </div>
-
             </div>
-
-          
         </div>
+         <!-- Scroll Arrow -->
+         <a class="d-none d-xl-inline arrow-icon position-absolute w-100 text-center hero2" href="#developer-section"
+            aria-label="Scroll to See Download Options">
+            <i class="bi bi-arrow-down-circle-fill" aria-hidden="true"></i>
+        </a>
     </section>
 
-    <!-- Our services -->
-    <section id="services" class="pt-md-5 mb-5" aria-labelledby="services-title">
+    <!-- Development Ecosystem -->
+    <section id="developer-section" class="pt-md-5 mb-5" aria-labelledby="developer-section">
         <div class="container">
-            <!-- Heading -->
+            <!-- First dApp -->
             <div class="heading-title text-center mb-3 mt-5 mt-md-0 mb-md-5 text-shadow px-3" data-aos="fade-up"
                 data-aos-delay="0">
                 <h2 id="services-title" class="hero3 px-3 px-md-0 fw-bold">
-                    Our <u>Services</u>
+                    Development Ecosystem
                 </h2>
                 <p class="bg-light d-inline-block px-4 py-2 rounded text-lg">
                     Navigate and interact seamlessly within the Archethic ecosystem
@@ -65,139 +59,104 @@
             <div class="row g-4 align-items-stretch">
                 <!-- Archethic Swap -->
                 <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region" aria-labelledby="swap-title"
-                    data-aos="fade-up" data-aos-delay="50" loading="lazy">
+                    data-aos="fade-up" data-aos-delay="50">
                     <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        style="background-image: url('assets/img/bg/swap-box.svg');" loading="lazy">
+                        style="background-image: url('assets/img/bg/swap-box.svg');">
                         <div class="d-flex flex-column flex-grow-1 gap-2">
-                            <h3 id="swap-title" class="text-xl card-title fw-bold">Archethic Swap</h3>
-                            <p class="op-08 card-text">Swap, Add liquidity and Earn UCO tokens directly from aeSwap.</p>
+                            <h3 id="swap-title" class="text-xl card-title fw-bold">Deploy Your First dApp</h3>
+                            <p class="op-08 card-text">In one click, deploy a dApp application on our Testnet Network.</p>
                         </div>
-                        <a href="https://swap.archethic.net/" target="_blank" class="btn btn-primary mt-3 align-self-start">
-                            Access aeSwap <i class="bi bi-arrow-right ms-2"></i>
+                        <a href="#" class="btn btn-secondary mt-3 align-self-start disabled" tabindex="-1" aria-disabled="true">
+                            Soon ...
+                            <i class="d-none bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Archethic Hot Wallet -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="hot-wallet-title" data-aos="fade-up" data-aos-delay="100" loading="lazy">
+                 <!-- Why Archethic? -->
+                 <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
+                    aria-labelledby="hot-wallet-title" data-aos="fade-up" data-aos-delay="100">
                     <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        style="background-image: url('assets/img/bg/wallet-box.svg');" loading="lazy">
+                        style="background-image: url('assets/img/bg/wallet-box.svg');">
                         <div class="d-flex flex-column flex-grow-1 gap-2">
-                            <h3 id="hot-wallet-title" class="text-xl card-title fw-bold">Archethic Hot Wallet</h3>
-                            <p class="op-08 card-text">It is the key to access Archethic Blockchain ecosystem.</p>
+                            <h3 id="hot-wallet-title" class="text-xl card-title fw-bold">Why Archethic?</h3>
+                            <p class="op-08 card-text">Discover Benefits to launch your application on Archethic.</p>
                         </div>
-                        <a href="/hot-wallet" class="btn btn-primary mt-3 align-self-start">
+                        <a href="#" class="btn btn-secondary mt-3 align-self-start disabled" tabindex="-1" aria-disabled="true">
+                            Soon ...
+                            <i class="d-none bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+ 
+                <!-- Developer Docs -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
+                    aria-labelledby="hot-wallet-title" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
+                        style="background-image: url('assets/img/bg/wallet-box.svg');">
+                        <div class="d-flex flex-column flex-grow-1 gap-2">
+                            <h3 id="hot-wallet-title" class="text-xl card-title fw-bold">Developer Docs</h3>
+                            <p class="op-08 card-text">Learn how to get started on Archetic.</p>
+                        </div>
+                        <a href="https://wiki.archethic.net/category/dapp-development" class="btn btn-primary mt-3 align-self-start">
                             Get it now <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+ 
+                <!-- SDK -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
+                    aria-labelledby="bridge-title" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
+                        style="background-image: url('assets/img/bg/bridge-box.svg');">
+                        <div class="d-flex flex-column flex-grow-1 gap-2">
+                            <h3 id="bridge-title" class="text-xl card-title fw-bold">SDKs</h3>
+                            <p class="op-08 card-text">Great SDK to build dApp on Archethic Blockchain.</p>
+                        </div>
+                        <a href="https://wiki.archethic.net/build/sdk/" target="_blank"
+                            class="btn btn-primary mt-3 align-self-start">
+                           Go to SDK Page <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Tutorials -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
+                    aria-labelledby="bridge-title" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
+                        style="background-image: url('assets/img/bg/bridge-box.svg');">
+                        <div class="d-flex flex-column flex-grow-1 gap-2">
+                            <h3 id="bridge-title" class="text-xl card-title fw-bold">Tutorials</h3>
+                            <p class="op-08 card-text">Step by Step Tutorials to develop dApp for different use-cases.</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary mt-3 align-self-start disabled" tabindex="-1" aria-disabled="true">
+                            Soon ...
+                            <i class="d-none bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Archethic Bridge -->
                 <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="bridge-title" data-aos="fade-up" data-aos-delay="150" loading="lazy">
+                    aria-labelledby="bridge-title" data-aos="fade-up" data-aos-delay="150">
                     <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        style="background-image: url('assets/img/bg/bridge-box.svg');" loading="lazy">
+                        style="background-image: url('assets/img/bg/bridge-box.svg');">
                         <div class="d-flex flex-column flex-grow-1 gap-2">
-                            <h3 id="bridge-title" class="text-xl card-title fw-bold">Archethic Bridge</h3>
-                            <p class="op-08 card-text">Bridge your UCO and other liquidity in and out of the Archethic
-                                Blockchain.</p>
+                            <h3 id="bridge-title" class="text-xl card-title fw-bold">Developer Tools</h3>
+                            <p class="op-08 card-text">A set of tools to help you to build faster.</p>
                         </div>
-                        <a href="https://bridge.archethic.net/bridge" target="_blank"
-                            class="btn btn-primary mt-3 align-self-start">
-                            Open the bridge <i class="bi bi-arrow-right ms-2"></i>
+                        <a href="#" class="btn btn-secondary mt-3 align-self-start disabled" tabindex="-1" aria-disabled="true">
+                            Soon ...
+                            <i class="d-none bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Archethic Explorer -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="explorer-title" data-aos="fade-up" data-aos-delay="200" loading="lazy">
-                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        style="background-image: url('assets/img/bg/explorer-box.svg');" loading="lazy">
-                        <div class="d-flex flex-column flex-grow-1 gap-2">
-                            <h3 id="explorer-title" class="text-xl card-title fw-bold">Archethic Explorer</h3>
-                            <p class="op-08 card-text">Visualize all transactions happening on the Archethic blockchain in
-                                real-time.</p>
-                        </div>
-                        <a href="https://explorer.archethic.net/" target="_blank"
-                            class="btn btn-primary mt-3 align-self-start">
-                            Open explorer <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
 
+
+           
                
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Key Highlights -->
-    <section id="key-highlights" class="pt-md-5 mb-5" aria-labelledby="key-highlights-title">
-        <div class="container">
-
-            <!-- Heading -->
-            <div class="heading-title text-center mb-3 mt-5 mt-md-0 mb-md-5 text-shadow px-3" data-aos="fade-up"
-                data-aos-delay="0">
-                <h2 id="key-highlights-title" class="hero3 px-md-0 fw-bold">
-                    <u>Key</u> Highlights
-                </h2>
-                <p class="bg-light d-inline-block px-4 py-2 rounded text-lg">
-                    Explore what defines Archethic through these essential highlights.
-                </p>
-            </div>
-
-            <!-- Cards -->
-            <div class="row g-4 align-items-stretch">
-
-                <!-- The UCO Token -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="uco-token-title" data-aos="fade-up" data-aos-delay="50" loading="lazy">
-                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        loading="lazy">
-                        <div class="d-flex flex-column flex-grow-1 gap-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <img src="/assets/img/icons/uco-token.svg" draggable="false" width="34px" alt="UCO Token"
-                                    loading="lazy">
-                                <h3 id="uco-token-title" class="text-xl card-title fw-bold mb-0">The UCO Token</h3>
-                            </div>
-                            <p class="op-08 card-text flex-grow-1">
-                                Discover how the UCO token supports our ecosystem, from transaction fees to community
-                                governance.
-                                Understand the mechanics behind our tokenomics and how it adds value over time.
-                            </p>
-                        </div>
-                        <a href="/uco-token" class="btn btn-secondary mt-3 align-self-start">
-                            Find out more <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Our Technology -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="technology-title" data-aos="fade-up" data-aos-delay="100" loading="lazy">
-                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        loading="lazy">
-                        <div class="d-flex flex-column flex-grow-1 gap-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <i class="bi bi-fingerprint text-xxl"></i>
-                                <h3 id="technology-title" class="text-xl card-title fw-bold mb-0">Our Technology</h3>
-                            </div>
-                            <p class="op-08 card-text flex-grow-1">
-                                Explore the technology that powers Archethic's seedless cold wallet.
-                                Learn about our use of biometric authentication and the blockchain advancements that focus
-                                on security and privacy.
-                            </p>
-                        </div>
-                        <a href="/technology" class="btn btn-secondary mt-3 align-self-start">
-                            Learn more <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-              
             </div>
         </div>
     </section>
@@ -221,9 +180,8 @@
 
                 <!-- X (Twitter) -->
                 <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="twitter-title" data-aos="fade-up" data-aos-delay="50" loading="lazy">
-                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        loading="lazy">
+                    aria-labelledby="twitter-title" data-aos="fade-up" data-aos-delay="50">
+                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100">
                         <div class="d-flex flex-column flex-grow-1 gap-2">
                             <div class="d-flex align-items-center gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -247,9 +205,8 @@
 
                 <!-- Telegram -->
                 <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="telegram-title" data-aos="fade-up" data-aos-delay="100" loading="lazy">
-                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        loading="lazy">
+                    aria-labelledby="telegram-title" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100">
                         <div class="d-flex flex-column flex-grow-1 gap-2">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-telegram text-xxl"></i>
@@ -269,9 +226,8 @@
 
                 <!-- Discord -->
                 <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" role="region"
-                    aria-labelledby="discord-title" data-aos="fade-up" data-aos-delay="150" loading="lazy">
-                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100"
-                        loading="lazy">
+                    aria-labelledby="discord-title" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cards-box bg-1 text-light rounded-xl p-4 p-md-5 d-flex flex-column gap-3 w-100">
                         <div class="d-flex flex-column flex-grow-1 gap-2">
                             <div class="d-flex align-items-center gap-3">
                                 <i class="bi bi-discord text-xxl"></i>
@@ -291,7 +247,7 @@
 
                 <!-- Medium -->
                 <div class="col-md-6 col-lg-12" role="region" aria-labelledby="medium-title" data-aos="fade-up"
-                    data-aos-delay="200" loading="lazy">
+                    data-aos-delay="200">
                     <div class="card bg-1 text-light h-100 rounded-xl overflow-hidden">
                         <div class="row g-0">
                             <div class="col-md-12 col-lg-7 p-4 p-md-5 d-flex flex-column justify-content-center">
@@ -315,34 +271,8 @@
                 </div>
             </div>
         </div>
- 
-
-
-<script>
-  const phrases = [
-    "<u>Build</u> the future",
-      "<u>Host</u> everywhere",
-      "<u>Scale</u> infinitely",
-      "<u>Own</u> true digital identity"
-  ];
-
-  const titleEl = document.getElementById("animated-title");
-  let index = 0;
-
-  function showNextPhrase() {
-    titleEl.classList.remove("visible");
-
-    setTimeout(() => {
-      titleEl.innerHTML = phrases[index]; // 👈 innerHTML pour le HTML dynamique
-      titleEl.classList.add("visible");
-
-      index = (index + 1) % phrases.length;
-    }, 600);
-  }
-
-  showNextPhrase();
-  setInterval(showNextPhrase, 4000);
-</script>
-
     </section>
+
+   
+  
 @endsection
