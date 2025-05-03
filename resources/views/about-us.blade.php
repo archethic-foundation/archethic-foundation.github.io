@@ -18,11 +18,21 @@
                     </h1>
                     <!-- Description -->
                     <p id="about_us-desc" class="text-lg mb-4 op-09 text-shadow">
-                        As of May 1st, 2025, a <u><strong>new</strong></u> and <u><strong>motivated</strong></u> team has taken over to  relaunch and carry forward the Archethic project,
+                        As of May 1st, 2025, Archethic has become a <strong>fully open-source</strong> project. A
+                         new and motivated community-driven team has taken over to  relaunch and carry forward the Archethic project,
                         <br>
-                        <br class="d-none d-lg-inline">
-                        The main objectives are to <u><strong>preserve</strong></u> the excellence of Archethic technologies,<br><u><strong>promote</strong></u> the blockchain to developers, and <u><strong>support</strong></u> the stability and growth of the UCO token.
+                                </p>
+
+                    <p id="about_us-desc" class="text-lg mb-4 op-09 text-shadow">
+                        Archethic technologies (Transaction Chain, Arch Consensus,... ) are the result of 7 years of research and development, backed by patents and deep innovation.   </p>
+
+
+                    <p id="about_us-desc" class="text-lg mb-4 op-09 text-shadow">
+                      
+                        The main objectives are to <strong>preserve</strong> the excellence of Archethic technologies,<br><strong>promote</strong> the blockchain to developers, and <strong>support</strong> the stability and growth of the UCO token.
                     </p>
+
+
                     <a href="#about_us-questions" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent" title="See Download Options">
                         Learn more on objectives & organisation <i class="d-none bi bi-arrow-down ms-2"></i>
                     </a>
@@ -46,7 +56,10 @@
                     </h1> 
                     <div class="w-100  heading-title text-left mb-1 mt-2 mt-md-0 mb-md-5 pt-md-5 px-3 px-md-2 text-shadow   content  "  role="region"
                 aria-labelledby="vision-mission-title vision-mission-desc" data-aos="fade-up" data-aos-delay="50">
-                 This is a collection of Questions about the Reboot of the project.<br><br>The team will try to be the more transparent as possible.<br>Feel free to contact us (small rose icon) for adding questions or for improving this section.
+                This section gathers the most common questions about the reboot of the project.<br><br>
+
+The team is committed to being as transparent as possible.  <br><br>
+Feel free to reach out via our Telegram groups to suggest new questions or help improve this FAQ.<br><br>
                
             </div>
                     <div class="w-100  heading-title text-left mb-3 mt-3 mt-md-0 mb-md-5 pt-md-3 px-3 px-md-2 text-shadow all-articles content  "  role="region"

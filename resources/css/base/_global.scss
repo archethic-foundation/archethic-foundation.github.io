@@ -84,12 +84,24 @@ h1, h2, h3 {
 
 .cursor-pointer {
     cursor: pointer;
-  }
+}
 
 .hover-opacity {
     transition: opacity 0.2s ease-in-out;
-  }
+}
   
 .hover-opacity:hover {
     opacity: 0.1; /* Ou toute autre valeur entre 0 (transparent) et 1 (opaque) */
-  }
+}
+
+#animated-title {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+  
+#animated-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

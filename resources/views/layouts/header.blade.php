@@ -155,6 +155,27 @@
     </nav>
 </header>
 
+<style>
+
+@media (max-width: 1024px) {
+  #header-uco {
+    top: 300px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #header-uco {
+    top: 300px !important;
+  }
+}
+@media (min-width: 1025px) {
+  #header-uco {
+    top: 0 !important;
+  }
+}
+
+</style>
+
 @if(Route::is('uco-token'))
     <div id="header-uco" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow">
         <span class="d-none d-md-inline me-2">Do you still have the Old UCO token on Ethereum, Polygon or BNB chain ?</span>
@@ -166,8 +187,8 @@
 
 @if(Route::is('welcome'))
     <div id="header-uco" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow">
-        <span class="  d-md-inline me-2 text-xl"> <i class="bi bi-megaphone-fill ms-2  mr-2"></i>   <u class="ml-2"><strong>May 1st</strong></u> marks a reboot. A new team takes over to boost the project.</span>
-        <a href="/about-us"   class="fw-bold text-light">
+        <span class="  d-md-inline me-2 text-xl"> <i class="bi bi-megaphone-fill ms-2  mr-2"></i>   <u class="ml-2"><strong>May 1st</strong></u> marks a reboot. A community-driven team takes over to boost the project.</span>
+        <a href="/about-us"  class="fw-bold text-light">
            Read more  
         </a>
     </div>

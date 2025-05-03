@@ -82,7 +82,7 @@ async function fetchArticles() {
         let body = ""
         for (let i = 0; i < sections.length; i++) {
             let section = '';
-            section += '<h1 id="about_us-title" class="hero1 mb-4 mt-4 fw-bold text-shadow  ">'
+            section += '<h1 id="about_us-title" class="hero1 mb-4 mt-4 fw-bold text-shadow  "  data-aos="fade-up" data-aos-delay="50">'
             section += sections[i].title_en
             section += '</h1> '
 

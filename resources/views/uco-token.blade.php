@@ -146,7 +146,6 @@
                                     </a>
                                 </div>
 
-
                                 <div class="col-6 d-none">
                                     <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
                                    

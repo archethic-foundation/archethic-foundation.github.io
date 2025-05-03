@@ -13,9 +13,11 @@
                 <div class="col-xl-8">
 
                 
+ 
+<h1 id="animated-title"  class="hero4 mb-4 text-shadow text-center text-xl-start fw-bold"></h1>
 
                     <!-- Title -->
-                    <h1 id="home-top-title" class="hero4 mb-4 text-shadow text-center text-xl-start fw-bold">
+                    <h1 id="home-top-title" class="d-none hero4 mb-4 text-shadow text-center text-xl-start fw-bold">
                         <u>Build</u> the future, <u>Host</u> everywhere, <u>Scale</u> infinitely, <u>Own</u> true digital identity
                     </h1>
 
@@ -30,10 +32,10 @@
                     </p>
                   
                     <!-- Buttons -->
-                    <a href="/technology" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent" title="See Download Options">
+                    <a href="/technology" class="btn mx-auto mx-lg-0 border border-white text-white bg-transparent mt-3" title="See Download Options">
                         Discover our technologies <i class="d-none bi bi-arrow-right ms-2"></i>
                     </a>
-                    <a href="/hot-wallet" class="btn btn-secondary mx-auto mx-lg-0" title="See Download Options">
+                    <a href="/hot-wallet" class="btn btn-secondary mx-auto mx-lg-0 mt-3" title="See Download Options">
                         Download Hot Wallet <i class="bi bi-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -313,5 +315,34 @@
                 </div>
             </div>
         </div>
+ 
+
+
+<script>
+  const phrases = [
+    "<u>Build</u> the future",
+      "<u>Host</u> everywhere",
+      "<u>Scale</u> infinitely",
+      "<u>Own</u> true digital identity"
+  ];
+
+  const titleEl = document.getElementById("animated-title");
+  let index = 0;
+
+  function showNextPhrase() {
+    titleEl.classList.remove("visible");
+
+    setTimeout(() => {
+      titleEl.innerHTML = phrases[index]; // 👈 innerHTML pour le HTML dynamique
+      titleEl.classList.add("visible");
+
+      index = (index + 1) % phrases.length;
+    }, 600);
+  }
+
+  showNextPhrase();
+  setInterval(showNextPhrase, 4000);
+</script>
+
     </section>
 @endsection
