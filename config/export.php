@@ -15,6 +15,7 @@ return [
      * For example: "about", "posts/featured"
      */
     'paths' => [
+        'questions-reponses',
         'aewallet-dispatcher',
         'privacy-policy-archethic',
         'privacy-policy-wallet',
