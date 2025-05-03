@@ -1,3 +1,5 @@
+
+
 export async function fetchArticleData(id) {
     const response = await fetch(`https://archethic-articles.vercel.app/questions/${id}`);
     if (!response.ok) {
