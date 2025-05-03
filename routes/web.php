@@ -35,12 +35,13 @@ Route::middleware([SeoNoIndex::class])->group(function () {
         return view('question-list');
     })->name('question-list');
 
-    Route::get('/questions-responses/{id}', function ($id) {
-        return view('questions-responses', [
-            'id' => $id,
-            
-        ]);
+    Route::get('/questions-responses', function () {
+        return view('questions-responses');
     })->name('questions-responses');
+/*
+    Route::get('/questions-responses', function ($id) {
+        return view('questions-responses'   );
+    })->name('questions-responses');*/
  
     Route::get('/ecosystem', function () {
         return view('ecosystem', [

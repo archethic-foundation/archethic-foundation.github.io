@@ -40,7 +40,11 @@ function formatLastUpdated(date, lang = 'en', full= true) {
 async function fetchArticle() {
 
     const urlParts = window.location.pathname.split("/");
-    const pageId = urlParts[urlParts.length - 1];
+   // const pageId = urlParts[urlParts.length - 1];
+    const params = new URLSearchParams(window.location.search);
+const pageId = params.get('id');
+
+
     if (urlParts[1] != "questions-responses") return;
     const articleTitleElements = document.getElementsByClassName('article-title');
     const articleContentElements = document.getElementsByClassName('article-content');
@@ -90,7 +94,7 @@ async function fetchArticles() {
             let articles = sections[i].articles
             for (let j = 0; j < articles.length; j++) {
                 let content = ''
-                content += `<a href="/questions-responses/${articles[j].id}" class="w-100  heading-title text-left mb-1 mt-1 mt-md-0 mb-md-1 pt-md-1 px-3 px-md-5 text-shadow d-flex flex-row cursor-pointer hover-opacity" role="region"`
+                content += `<a href="/questions-responses?id=${articles[j].id}" class="w-100  heading-title text-left mb-1 mt-1 mt-md-0 mb-md-1 pt-md-1 px-3 px-md-5 text-shadow d-flex flex-row cursor-pointer hover-opacity" role="region"`
                 content += 'aria-labelledby="vision-mission-title vision-mission-desc" data-aos="fade-up" data-aos-delay="50">'
                 content += '<p id="vision-mission-desc" class="w-100 bg-light d-inline-block px-4 py-3 rounded text-lg ">'
                 content += '<span>' + articles[j].title_en + '<br><small class="text-right text-xs w-100 fw-normal">'+formatLastUpdated(articles[j]?.updated_at, 'en')+'</small></span>'
