@@ -158,26 +158,36 @@
 <style>
 
 @media (max-width: 1024px) {
-  #header-uco {
-    top: 300px !important;
+  #header-welcome {
+    top: 450px !important;
   }
 }
 
 @media (max-width: 767.98px) {
-  #header-uco {
-    top: 300px !important;
+  #header-welcome {
+    top: 450px !important;
   }
 }
 @media (min-width: 1025px) {
-  #header-uco {
+  #header-welcome {
     top: 0 !important;
   }
 }
 
+.fade-element {
+    transition: opacity 0.5s ease;
+}
+
+.fade-element.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 </style>
 
 @if(Route::is('uco-token'))
-    <div id="header-uco" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow">
+    <div id="header-uco" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow fade-element"  >
         <span class="d-none d-md-inline me-2">Do you still have the Old UCO token on Ethereum, Polygon or BNB chain ?</span>
         <a href="https://migration-uco.archethic.net" target="_blank" class="fw-bold text-light">
             Migration Tool <sup><i class="bi bi-box-arrow-up-right ms-2"></i></sup>
@@ -186,10 +196,25 @@
 @endif
 
 @if(Route::is('welcome'))
-    <div id="header-uco" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow">
+    <div id="header-welcome" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow fade-element"  >
         <span class="  d-md-inline me-2 text-xl"> <i class="bi bi-megaphone-fill ms-2  mr-2"></i>   <u class="ml-2"><strong>May 1st</strong></u> marks a reboot. A community-driven team takes over to boost the project.</span>
         <a href="/about-us"  class="fw-bold text-light">
            Read more  
         </a>
     </div>
 @endif
+
+
+<script>
+window.addEventListener('scroll', function () {
+    const target = document.getElementById('header-welcome');
+    if (!target) return;
+console.log(window.scrollY )
+console.log(target.classList )
+    if (window.scrollY > 200) {
+        target.classList.add('hidden');
+    } else {
+        target.classList.remove('hidden');
+    }
+});
+</script>
