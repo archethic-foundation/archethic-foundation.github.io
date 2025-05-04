@@ -6,7 +6,7 @@
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Archtehic">
+    <meta name="author" content="Archethic">
     <meta name="robots" content="@yield('meta_robots', 'index, follow')">
     <title>@yield('title', 'Archethic Website')</title>
     <meta name="description" content="@yield('meta_description', 'Default description for Archethic Website')">
