@@ -170,7 +170,7 @@
 }
 @media (min-width: 1025px) {
   #header-welcome {
-    top: 0 !important;
+    top: 4.5rem !important;
   }
 }
 
@@ -183,6 +183,9 @@
     pointer-events: none;
 }
 
+.top-6 {
+  top: 4.5rem !important;
+}
 
 </style>
 
@@ -196,7 +199,7 @@
 @endif
 
 @if(Route::is('welcome'))
-    <div id="header-welcome" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow fade-element"  >
+    <div id="header-welcome" class="bg-1 border-0 rounded-0 text-center mb-0 py-2 fixed-top text-shadow fade-element top-6"  >
         <span class="  d-md-inline me-2 text-xl"> <i class="bi bi-megaphone-fill ms-2  mr-2"></i>   <u class="ml-2"><strong>May 1st</strong></u> marks a reboot. A community-driven team takes over to boost the project.</span>
         <a href="/about-us"  class="fw-bold text-light">
            Read more  

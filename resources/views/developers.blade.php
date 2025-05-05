@@ -3,7 +3,7 @@
 
 <!-- SEO-->
 @section('title', 'Archethic')
-@section('meta_description', 'Discover Archethic (UCO), the blockchain platform revolutionizing security and identity.')
+@section('meta_description', 'Archethic Developer section, allows to build distributed applications.')
 
 <!-- Ecosystem Top Section -->
 @section('content')
