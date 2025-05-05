@@ -255,7 +255,7 @@
             <!-- Chart Section -->
             <div class=" row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="100">
                 <div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px;">
-                    <canvas class="d-none" id="tokenomicsChart" style="flex: 0 0 60%;"></canvas>
+                    <canvas class=" " id="tokenomicsChart" style="flex: 0 0 60%;"></canvas>
                 </div>
             </div>
         </div>

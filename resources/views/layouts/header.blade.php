@@ -170,7 +170,7 @@
 }
 @media (min-width: 1025px) {
   #header-welcome {
-    top: 10.1948H1760px !important;
+    top: 4.5rem !important;
   }
 }
 
@@ -184,7 +184,7 @@
 }
 
 .top-6 {
-  top: 1.5rem !important;
+  top: 4.5rem !important;
 }
 
 </style>
