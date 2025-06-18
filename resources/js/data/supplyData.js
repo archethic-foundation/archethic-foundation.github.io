@@ -31,3 +31,27 @@ export async function fetchTotalData() {
         return 965861930.26785046;
     }
 }
+
+
+
+
+export async function fetchWalletsData() {
+    try {
+        const response = await fetch("https://uco-token-supply.vercel.app/metrics");
+        if (response.ok) {
+            const data = JSON.parse(await response.text());
+        
+            return data;
+        } else {
+            console.error(`Fetch failed: ${response.status}`);
+            return 0;
+        }
+    } catch (error) {
+        console.error(`Fetch failed with error: ${error}`);
+        return 0;
+    }
+}
+
+
+
+

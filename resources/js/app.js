@@ -13,9 +13,9 @@ import { showSpinner, updateElements } from './data/domUtils';
 import { fetchCirculatingData, fetchTotalData } from './data/supplyData';
 import { fetchUcoPriceData } from './data/ucoPriceData';
 import { fetchArticleData, fetchArticlesData } from './data/articleData';
+import { fetchWalletsData } from './data/supplyData';
 
-
-function formatLastUpdated(date, lang = 'en', full= true) {
+function formatLastUpdated(date, lang = 'en', full = true) {
 
     if (date == undefined) return ""
     if (date == "") return ""
@@ -40,9 +40,9 @@ function formatLastUpdated(date, lang = 'en', full= true) {
 async function fetchArticle() {
 
     const urlParts = window.location.pathname.split("/");
-   // const pageId = urlParts[urlParts.length - 1];
+    // const pageId = urlParts[urlParts.length - 1];
     const params = new URLSearchParams(window.location.search);
-const pageId = params.get('id');
+    const pageId = params.get('id');
 
 
     if (urlParts[1] != "questions-responses") return;
@@ -97,7 +97,7 @@ async function fetchArticles() {
                 content += `<a href="/questions-responses?id=${articles[j].id}" class="w-100  heading-title text-left mb-1 mt-1 mt-md-0 mb-md-1 pt-md-1 px-3 px-md-5 text-shadow d-flex flex-row cursor-pointer hover-opacity" role="region"`
                 content += 'aria-labelledby="vision-mission-title vision-mission-desc" data-aos="fade-up" data-aos-delay="50">'
                 content += '<p id="vision-mission-desc" class="w-100 bg-light d-inline-block px-4 py-3 rounded text-lg ">'
-                content += '<span>' + articles[j].title_en + '<br><small class="text-right text-xs w-100 fw-normal">'+formatLastUpdated(articles[j]?.updated_at, 'en')+'</small></span>'
+                content += '<span>' + articles[j].title_en + '<br><small class="text-right text-xs w-100 fw-normal">' + formatLastUpdated(articles[j]?.updated_at, 'en') + '</small></span>'
                 content += '</p>'
                 content += '<p> <i class="  bi bi-arrow-right ms-2   "></i></p>'
                 content += '</a>';
@@ -114,6 +114,26 @@ async function fetchArticles() {
 
 document.addEventListener('DOMContentLoaded', fetchArticles);
 
+function formatNumber(num) {
+  if (num === null || num === undefined || isNaN(num)) return '-';
+
+  const units = [
+    { value: 1e12, symbol: 'T' },
+    { value: 1e9,  symbol: 'B' },
+    { value: 1e6,  symbol: 'M' },
+    { value: 1e3,  symbol: 'k' }
+  ];
+
+  for (const unit of units) {
+    if (num >= unit.value) {
+      return (num / unit.value).toFixed(2) + unit.symbol;
+    }
+  }
+
+  return num.toFixed(2);
+}
+
+
 
 async function fetchData() {
     const urlParts = window.location.pathname.split("/");
@@ -123,36 +143,87 @@ async function fetchData() {
     const marketCapElements = document.getElementsByClassName('market-cap');
     const circulatingSupplyElements = document.getElementsByClassName('circulating-supply');
     const totalSupplyElements = document.getElementsByClassName('total-supply');
+
+
+    const archethicSupplyElements = document.getElementsByClassName('archithic-supply');
+    const ethSupplyElements = document.getElementsByClassName('eth-supply');
+    const polygonSupplyElements = document.getElementsByClassName('polygon-supply');
+    const bnbSupplyElements = document.getElementsByClassName('bnb-supply');
+
+    const archethicBridgeWallet = document.getElementsByClassName('archethic-bridge-wallet');
+    const archethicBurnWallet = document.getElementsByClassName('archethic-burn-wallet');
+
+    const archethicNotMintedUCO = document.getElementsByClassName('archethic-not-minted-uco');
+    const archethicMintedUCO = document.getElementsByClassName('archethic-minted-uco');
+
     showSpinner(ucoPriceElements);
     showSpinner(marketCapElements);
     showSpinner(circulatingSupplyElements);
     showSpinner(totalSupplyElements);
+
+    showSpinner(archethicSupplyElements);
+    showSpinner(ethSupplyElements);
+    showSpinner(polygonSupplyElements);
+    showSpinner(bnbSupplyElements);
+
+    showSpinner(archethicBridgeWallet);
+    showSpinner(archethicBurnWallet);
+
+    showSpinner(archethicNotMintedUCO);
+    showSpinner(archethicMintedUCO);
+
     try {
         const [
             currentPrice,
-            circulatingSupply,
+            //     circulatingSupply,
             totalSupply,
+            walletsSupply,
 
-            tvl
         ] = await Promise.all([
             fetchUcoPriceData(),
-            fetchCirculatingData(),
-            fetchTotalData()
+            //   fetchCirculatingData(),
+            fetchTotalData(),
+            fetchWalletsData(),
         ]);
 
+
+
+        const circulatingSupply = walletsSupply?.bnb + walletsSupply?.pol + walletsSupply?.eth + walletsSupply?.circulating_supply;
+
+
         const marketCap = currentPrice * circulatingSupply;
-        const formattedMarketCap = (marketCap / 1000000).toFixed(2) + "M";
+        const formattedMarketCap = formatNumber(marketCap / 100000000) ;
 
         updateElements(ucoPriceElements, currentPrice, price => '$' + price.toFixed(6));
         updateElements(marketCapElements, marketCap, cap => '$' + formattedMarketCap);
-        updateElements(circulatingSupplyElements, circulatingSupply, supply => (supply / 1000000).toFixed(2) + "M");
-        updateElements(totalSupplyElements, totalSupply, supply => (supply / 1000000).toFixed(0) + "M");
+
+
+        updateElements(circulatingSupplyElements, (circulatingSupply), supply => (supply / 100000000000000).toFixed(2) + "M");
+
+        updateElements(totalSupplyElements, totalSupply, supply => (supply / 1000000).toFixed(2) + "M");
+        updateElements(archethicSupplyElements, walletsSupply?.circulating_supply, supply => (supply / 100000000000000).toFixed(2) + "M");
+        updateElements(ethSupplyElements, walletsSupply?.eth, supply => (supply / 100000000000000).toFixed(2) + "M");
+        updateElements(polygonSupplyElements, walletsSupply?.pol, supply => (supply / 100000000000000).toFixed(2) + "M");
+        updateElements(bnbSupplyElements, walletsSupply?.bnb, supply => (supply / 100000000000000).toFixed(2) + "M");
+        updateElements(archethicBridgeWallet, walletsSupply?.bridge_wallet, supply => (supply / 100000000000000).toFixed(2) + "M");
+        updateElements(archethicBurnWallet, walletsSupply?.burn_wallet, supply => (supply / 100000000000000).toFixed(2) + "M");
+        updateElements(archethicNotMintedUCO, walletsSupply?.not_minted_uco, supply => (supply / 100000000000000).toFixed(2) + "M");
+        updateElements(archethicMintedUCO, walletsSupply?.minted_uco, supply => (supply / 100000000000000).toFixed(2) + "M");
 
     } catch (error) {
         updateElements(ucoPriceElements);
         updateElements(marketCapElements);
         updateElements(circulatingSupplyElements);
         updateElements(totalSupplyElements);
+        updateElements(archethicSupplyElements);
+        updateElements(ethSupplyElements);
+        updateElements(polygonSupplyElements);
+        updateElements(bnbSupplyElements);
+        updateElements(archethicBridgeWallet);
+        updateElements(archethicBurnWallet);
+        updateElements(archethicNotMintedUCO);
+        updateElements(archethicMintedUCO);
+
     }
 }
 

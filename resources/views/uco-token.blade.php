@@ -16,10 +16,17 @@
                     <p class="op-09 text-lg mb-4 text-shadow text-center text-md-start">
                         The UCO Token powers Archethic’s ecosystem, enabling secure transactions, governance, and
                         decentralized innovation. 
-                        Join Archethic’s vision of a password-free digital world built on privacy, security, and user
-                        empowerment.
+                       
                     </p>
-                
+                       <p class="op-09 text-lg mb-4 text-shadow text-center text-md-start">
+                       Unfortunately, the UCO token experienced a hack on the BNB chain that negatively impacted its price. Corrective actions have since been taken and the situation is now under control, paving the way for a more secure and sustainable future. More information is available in the 'About Us' section.
+                       
+                    </p>
+
+
+                 <a href="#buy-uco-link" class="btn btn-secondary mx-auto mx-lg-0 mt-3" title="See Download Options">
+                        Where to BUY <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
                 </div>
                 <div class="col-lg-3 col-xl-4 d-none d-lg-flex align-items-center">
                     <img src="/assets/img/bg/bg-uco-9.png" alt="Illustration of the UCO Token by Archethic"
@@ -71,7 +78,54 @@
                     </div>
                 </div>
 
-              
+             
+            </section>
+
+               <!-- Stats Boxes -->
+            <section class="row mt-4 mt-md-5 g-3 px-3 align-items-stretch" aria-labelledby="uco-stats">
+                <h2 id="uco-stats" class="visually-hidden">Key Statistics about the UCO Token</h2>
+
+                <!-- Archethic -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="archithic-supply-title" aria-describedby="archithic-supply-desc" data-aos="fade-up"
+                     data-aos-delay="0">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="archithic-supply-title" class="text-xxl mb-2 fw-black archithic-supply"></h3>
+                        <p id="archithic-supply-desc" class="text-md op-08 mb-0">Archethic</p>
+                    </div>
+                </div>
+
+                <!-- Ethereum -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="eth-supply-title" aria-describedby="eth-supply-desc" data-aos="fade-up"
+                     data-aos-delay="50">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="eth-supply-title" class="text-xxl mb-2 fw-black eth-supply"></h3>
+                        <p id="eth-supply-desc" class="text-md op-08 mb-0">Ethereum</p>
+                    </div>
+                </div>
+
+                <!-- Polygon -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="polygon-supply-title" aria-describedby="polygon-supply-desc" data-aos="fade-up"
+                     data-aos-delay="100">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="polygon-supply-title" class="text-xxl mb-2 fw-black polygon-supply"></h3>
+                        <p id="polygon-supply-desc" class="text-md op-08 mb-0">Polygon</p>
+                    </div>
+                </div>
+
+                <!-- BNB -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="bnb-supply-title" aria-describedby="bnb-supply-desc" data-aos="fade-up"
+                     data-aos-delay="150">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="bnb-supply-title" class="text-xxl mb-2 fw-black bnb-supply"></h3>
+                        <p id="bnb-supply-desc" class="text-md op-08 mb-0">BNB</p>
+                    </div>
+                </div>
+
+               <div id="buy-uco-link"></div>
             </section>
         </div>
     </section>
@@ -105,7 +159,7 @@
                                 </h3>
                             </div>
                             <div class="row g-3">
-                                <div class="col-6">
+                                <div class="col-6  d-none">
                                     <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
                                        href="https://www.mexc.com/exchange/UCO_USDT" title="Buy UCO on MEXC Exchange">
                                         <img height="70" src="/assets/img/exchanges/mexc.svg" alt="MEXC Exchange">
@@ -248,7 +302,8 @@
                     Archethic ecosystem.
                 </p>
                 <p id="tokenomics-desc" class="  bg-light d-inline-block px-4 py-2 rounded text-lg">
-                You’ll find all key information in the White Paper. However, we are currently revising the token-related figures, and an updated chart will be published in the coming weeks.
+                    This chart illustrates the token distribution across the various strategic allocations defined in the Archethic White Paper. Each segment represents the percentage of the total supply assigned to a specific purpose or initiative (e.g. network funding, adoption rewards, team, staking, liquidity, etc.). These predefined allocations help ensure a balanced, transparent, and mission-aligned use of the UCO supply throughout the ecosystem.
+                    Please note that these allocations are fixed by design, but their actual usage and minting evolve over time and are reflected in the live metrics below..
                 </p>
             </div>
 
@@ -258,9 +313,99 @@
                     <canvas class=" " id="tokenomicsChart" style="flex: 0 0 60%;"></canvas>
                 </div>
             </div>
+
+   <div class="heading-title text-center mt-5 mt-md-0 pt-md-5 px-md-5 text-shadow">
+ 
+
+     <h2 id="tokenomics-title" class="hero3 px-3 px-md-0 fw-bold">
+                
+                    <u>Wallet Consumption</u>  Rate per Allocation
+                </h2>
+              
+              <p id="tokenomics-desc" class="  bg-light d-inline-block px-4 py-2 rounded text-lg">
+             This chart displays the current usage ratio of each wallet allocation within the Archethic Mainnet. A value of 100% indicates that no tokens from the corresponding allocation have been used yet. As tokens are minted and consumed, the percentage decreases, offering a clear view of how much of each allocation has already been utilized versus what remains available. 
+                </p>
+            </div>
+            
+             <!-- Chart Section -->
+            <div class=" row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="100">
+                <div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px;">
+                    <canvas class=" " id="tokenomicsChartStatus" style="flex: 0 0 60%;"></canvas>
+                </div>
+            </div>
+
+
         </div>
     </section>
+    <section id="uco-token-top" class="top pt-lg-5 mb-5" aria-labelledby="uco-token-section">
+        <div class="container mt-md-0 pt-md-0 p-0">
+            <div class="row p-3 p-md-0 pt-5 mb-md-5 text-center text-md-start" data-aos="zoom-in">
+             <div class="heading-title text-center mt-5 mt-md-0 pt-md-5 px-md-5 text-shadow">
+                   
 
+
+               <h2 id="tokenomics-title" class="hero3 px-3 px-md-0 fw-bold">
+                    Overview of <u>Wallet Metrics</u> 
+                </h2>
+              <p id="tokenomics-desc" class="  bg-light d-inline-block px-4 py-2 rounded text-lg">
+               This section provides a dynamic overview of key wallet-related figures within the Archethic Mainnet. The data shown reflects live metrics regarding token allocation, minting status, and overall distribution. These indicators are essential to understanding the network’s current token economy, including unminted reserves, circulating supply, token bridging, and burn events.
+                </p>
+                </div>
+               
+            </div>
+
+            <!-- Stats Boxes -->
+            <section class="row mt-4 mt-md-5 g-3 px-3 align-items-stretch" aria-labelledby="uco-stats">
+                <h2 id="uco-stats" class="visually-hidden">Key Statistics about the UCO Token</h2>
+
+
+                  <!-- Minted UCO -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="minted-uco-title" aria-describedby="archethic-minted-uco-desc" data-aos="fade-up"
+                     data-aos-delay="150">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="archethic-minted-uco-title" class="text-xxl mb-2 fw-black archethic-minted-uco"></h3>
+                        <p id="archethic-minted-uco-desc" class="text-md op-08 mb-0">UCO Minted</p>
+                    </div>
+                </div>
+
+
+                <!-- Archethic -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="archethic-burn-wallet-title" aria-describedby="archethic-burn-wallet-desc" data-aos="fade-up"
+                     data-aos-delay="0">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="archethic-burn-wallet-title" class="text-xxl mb-2 fw-black archethic-burn-wallet"></h3>
+                        <p id="archethic-burn-wallet-desc" class="text-md op-08 mb-0">Burnt UCO</p>
+                    </div>
+                </div>
+
+                <!-- Ethereum -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="archethic-not-minted-uco-title" aria-describedby="archethic-not-minted-uco-desc" data-aos="fade-up"
+                     data-aos-delay="50">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="archethic-not-minted-uco-title" class="text-xxl mb-2 fw-black archethic-not-minted-uco"></h3>
+                        <p id="archethic-not-minted-uco-desc" class="text-md op-08 mb-0">Not Minted</p>
+                    </div>
+                </div>
+
+                <!-- Bride -->
+                <div class="col-12 col-sm-6 col-lg d-flex align-items-stretch" role="region"
+                     aria-labelledby="market-cap-title" aria-describedby="archethic-bridge-wallet-desc" data-aos="fade-up"
+                     data-aos-delay="100">
+                    <div class="bg-1 rounded-xl p-4 text-center d-flex flex-column justify-content-center w-100">
+                        <h3 id="archethic-bridge-wallet-title" class="text-xxl mb-2 fw-black archethic-bridge-wallet"></h3>
+                        <p id="archethic-bridge-wallet-desc" class="text-md op-08 mb-0">Bridge AE-EVM</p>
+                    </div>
+                </div>
+
+              
+
+              
+            </section>
+        </div>
+    </section>
 
     <!-- Wiki -->
     <section id="wiki" class="pt-md-5 mb-5" aria-labelledby="wiki-title">
