@@ -24,7 +24,7 @@
                     <h1 id="ecosystem-title" class="hero3 mb-4 fw-bold text-shadow">
                         no servers, no Solidity, no limits.
                     </h1>
-
+                     
                     <!-- Description -->
                   
                     <p id="ecosystem-desc" class="text-lg mb-4 op-09 text-shadow">
@@ -39,6 +39,23 @@
             <i class="bi bi-arrow-down-circle-fill" aria-hidden="true"></i>
         </a>
     </section>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
 
     <!-- Development Ecosystem -->
     <section id="developer-section" class="pt-md-5 mb-5" aria-labelledby="developer-section">
@@ -64,12 +81,25 @@
                         style="background-image: url('assets/img/bg/swap-box.svg');">
                         <div class="d-flex flex-column flex-grow-1 gap-2">
                             <h3 id="swap-title" class="text-xl card-title fw-bold">Deploy Your First dApp</h3>
-                            <p class="op-08 card-text">In one click, deploy a dApp application on our Testnet Network.</p>
+                            <p id="toDeployLabel" class="op-08 card-text" style="height:25px" >In one click, deploy a website or an dApp application on the Network.<br></p>
+                            <p id="log" class="op-08 card-text" style="display: none;height:25px">   
+                            <div  id="progress-container"  class="progress-container"  style="visibility: hidden;">
+                                <div class="progress-label" id="progress-text">Processing... 0%</div>
+                                    <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" id="progress-bar"></div>
+                                </div>
+                            </div>
+                        </p>
                         </div>
-                        <a href="#" class="btn btn-secondary mt-3 align-self-start disabled" tabindex="-1" aria-disabled="true">
-                            Soon ...
-                            <i class="d-none bi bi-arrow-right ms-2"></i>
+                        <div id="deployBtn" href="#" class="btn btn-secondary mt-3 align-self-start  " tabindex="-1" aria-disabled="true">
+                            Deploy a sample
+                            <i class="  bi bi-arrow-right ms-2"></i>
+                        </div>
+                            <a id="viewWebSiteBtn" href="#" class="btn btn-secondary mt-3 align-self-start" target="_blank" style="display: none;" tabindex="-1" aria-disabled="true">
+                            View the Deployed Site
+                            <i class="  bi bi-arrow-right ms-2"></i>
                         </a>
+                        
                     </div>
                 </div>
 

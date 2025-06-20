@@ -14,6 +14,8 @@
         "vite": "^5.3.3"
     },
     "dependencies": {
+        "@archethicjs/ae-contract-test": "^1.0.14",
+        "@archethicjs/sdk": "^2.0.0",
         "@react-three/drei": "^9.108.3",
         "@react-three/fiber": "^8.16.8",
         "classnames": "^2.5.1",

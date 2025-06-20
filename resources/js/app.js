@@ -15,6 +15,9 @@ import { fetchUcoPriceData } from './data/ucoPriceData';
 import { fetchArticleData, fetchArticlesData } from './data/articleData';
 import { fetchWalletsData } from './data/supplyData';
 
+
+let progress = 0;
+
 function formatLastUpdated(date, lang = 'en', full = true) {
 
     if (date == undefined) return ""
@@ -115,22 +118,22 @@ async function fetchArticles() {
 document.addEventListener('DOMContentLoaded', fetchArticles);
 
 function formatNumber(num) {
-  if (num === null || num === undefined || isNaN(num)) return '-';
+    if (num === null || num === undefined || isNaN(num)) return '-';
 
-  const units = [
-    { value: 1e12, symbol: 'T' },
-    { value: 1e9,  symbol: 'B' },
-    { value: 1e6,  symbol: 'M' },
-    { value: 1e3,  symbol: 'k' }
-  ];
+    const units = [
+        { value: 1e12, symbol: 'T' },
+        { value: 1e9, symbol: 'B' },
+        { value: 1e6, symbol: 'M' },
+        { value: 1e3, symbol: 'k' }
+    ];
 
-  for (const unit of units) {
-    if (num >= unit.value) {
-      return (num / unit.value).toFixed(2) + unit.symbol;
+    for (const unit of units) {
+        if (num >= unit.value) {
+            return (num / unit.value).toFixed(2) + unit.symbol;
+        }
     }
-  }
 
-  return num.toFixed(2);
+    return num.toFixed(2);
 }
 
 
@@ -192,7 +195,7 @@ async function fetchData() {
 
 
         const marketCap = currentPrice * circulatingSupply;
-        const formattedMarketCap = formatNumber(marketCap / 100000000) ;
+        const formattedMarketCap = formatNumber(marketCap / 100000000);
 
         updateElements(ucoPriceElements, currentPrice, price => '$' + price.toFixed(6));
         updateElements(marketCapElements, marketCap, cap => '$' + formattedMarketCap);
@@ -227,5 +230,123 @@ async function fetchData() {
     }
 }
 
+let blinkInterval;
 
-document.addEventListener('DOMContentLoaded', fetchData);
+function startBlink(text) {
+    blinkInterval = setInterval(() => {
+        text.style.visibility = (text.style.visibility === 'hidden') ? 'visible' : 'hidden';
+    }, 500);
+}
+
+function stopBlink(text) {
+    clearInterval(blinkInterval);
+    text.style.visibility = 'visible';
+}
+
+
+function updateProgress(value, message = "Loading...") {
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+
+    progressBar.style.width = value + '%';
+    progressText.textContent = `${message} ${value}%`;
+}
+
+
+
+
+async function deploySiteInit() {
+    document.getElementById('deployBtn').addEventListener('click', async () => {
+
+        let processingStep = 1;
+        const log = document.getElementById('log');
+        log.style.display = 'block';
+
+        const progressContainer = document.getElementById('progress-container');
+        progressContainer.style.visibility = 'visible';
+
+        const btDeploy = document.getElementById('deployBtn');
+        btDeploy.style.visibility = 'hidden';
+
+        const toDeployLabel = document.getElementById('toDeployLabel');
+        toDeployLabel.style.display = 'none';
+
+        const viewWebSiteBtn = document.getElementById('viewWebSiteBtn');
+        viewWebSiteBtn.style.display = 'none';
+
+        startBlink(log)
+        log.innerHTML = '<br>Request web site deployment...';
+
+
+        try {
+            const res = await fetch('https://ae-deploy-button.vercel.app/api/deploy', { method: 'POST' });
+            const data = await res.json();
+
+            if (!res.ok && data.error) {
+                log.textContent = '❌ Erreur : ' + data.error;
+                btDeploy.style.display = 'block';
+                toDeployLabel.style.display = 'block';
+                log.style.display = 'none';
+                return;
+            }
+
+            const { runId, html_url } = data.log;
+            log.innerHTML = `<br>Request accepted with ID: ${runId}`;
+
+            const interval = setInterval(async () => {
+                const statusRes = await fetch(`https://ae-deploy-button.vercel.app/api/status?runId=${runId}`);
+                const statusData = await statusRes.json();
+
+
+
+                if (progress >= 100) {
+                    progress = 0
+                    processingStep++
+                }
+                const randomNumber = Math.floor(Math.random() * 3) + 1;
+
+                if ( (progress +  randomNumber) < 100) {
+                     progress += randomNumber;
+                }
+               else  progress = 100;
+
+
+                updateProgress(progress, "Processing - step #" + processingStep+ " : ");
+ 
+                if (statusData.status == 'in_progress')   log.innerHTML = `<br>`;
+                if (statusData.status === 'completed') {
+                    clearInterval(interval);
+                    progress = 100;
+                    updateProgress(progress, "Completed");
+   
+                    stopBlink(log)
+                    log.style.display = 'block';
+                   
+
+                    if (statusData.website_url) {
+
+                        log.innerHTML = `<br>`; //🌐 Bingo!, the site is ready`
+                        viewWebSiteBtn.style.display = 'block';
+                        btDeploy.style.display = 'none';
+                      
+                        viewWebSiteBtn.href = statusData.website_url;
+ 
+                    }
+
+
+
+                }
+            }, 300);
+        }
+        catch (e) {
+            log.textContent = '❌ Erreur : ' + data.error;
+        }
+
+    });
+}
+
+document.addEventListener('DOMContentLoaded', deploySiteInit);
+
+
+
+
