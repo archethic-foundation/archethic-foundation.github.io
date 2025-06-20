@@ -230,6 +230,15 @@ async function fetchData() {
     }
 }
 
+
+document.addEventListener('DOMContentLoaded', fetchData);
+
+
+
+
+
+
+
 let blinkInterval;
 
 function startBlink(text) {
@@ -256,6 +265,8 @@ function updateProgress(value, message = "Loading...") {
 
 
 async function deploySiteInit() {
+
+    if (  document.getElementById('deployBtn') != undefined)
     document.getElementById('deployBtn').addEventListener('click', async () => {
 
         let processingStep = 1;
